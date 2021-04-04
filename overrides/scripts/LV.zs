@@ -117,13 +117,12 @@ hammer.findRecipe(6,[<gregtech:ore_copper_0>],null).remove();
 
 mods.nuclearcraft.manufactory.removeRecipeWithOutput([<gregtech:meta_item_1:10061>]);
 
-val SiliconRecipe = mods.modularmachinery.RecipeBuilder.newBuilder("silicon","t1blastfurnace",240,0);
-
-SiliconRecipe.addItemInput(<minecraft:sand>*8);
-SiliconRecipe.addItemInput(<gregtech:meta_item_1:10012> * 8);
-SiliconRecipe.addItemOutput(<gregtech:meta_item_1:10061>*8);
-SiliconRecipe.addFluidOutput(<liquid:carbon_monoxide>*2304);
-SiliconRecipe.build();
+val aluminaRecipe = mods.modularmachinery.RecipeBuilder.newBuilder("silicon","t1blastfurnace",240,0);
+aluminaRecipe.addItemInput(<minecraft:sand>*8);
+aluminaRecipe.addItemInput(<gregtech:meta_item_1:10012> * 8);
+aluminaRecipe.addItemOutput(<gregtech:meta_item_1:10061>*8);
+aluminaRecipe.addFluidOutput(<liquid:carbon_monoxide>*2304);
+aluminaRecipe.build();
 
 /*
 
@@ -152,9 +151,7 @@ IronIngotRecipe.addFluidOutput(<liquid:carbon_dioxide>*576);
 IronIngotRecipe.build();
 
 
-// drill bit
-
-
+// LV Drill Bit Recipe
 assembler.recipeBuilder()
     .inputs([<ore:ingotGraphite>,<ore:plateIron>*5])
     .outputs([<contenttweaker:material_part:4> *16])
@@ -162,34 +159,38 @@ assembler.recipeBuilder()
     .EUt(8)
     .buildAndRegister();
 
-/*
+/* PROCESS: Aluminum Production */
 
-ALUMINIUM PROCESS
-
-*/
-
+// Remove bauxite recipes
 recipes.remove(<gregtech:meta_item_1:2123>);
 furnace.remove(<gregtech:meta_item_1:2123>);
 macerator.findRecipe(12,[<gregtech:ore_bauxite_0>],null).remove();
 hammer.findRecipe(6,[<gregtech:ore_bauxite_0>],null).remove();
 
+// Remove crushed bauxite recipes
 recipes.remove(<gregtech:meta_item_1:3123>);
 macerator.findRecipe(12,[<gregtech:meta_item_1:5123>],null).remove();
 hammer.findRecipe(8,[<gregtech:meta_item_1:5123>],null).remove();
 thermal_sep.findRecipe(60,[<gregtech:meta_item_1:5123>],null).remove();
 
+// MIXER: Crushed Bauxite + Sodium Hydroxide Solution ==> Sodium Ion Solution + Aluminum Hydroxide [Al(OH)4] Solution
 mixer.recipeBuilder()
     .inputs([<gregtech:meta_item_1:5123>])
-    .fluidInputs([<liquid:sodium_hydroxide>*144])
-    .fluidOutputs([<liquid:fluid.sodiumionsolution>*144, <liquid:aluminumhydroxidesolution>*144])
+    .fluidInputs([<nuclearcraft:fluid_sodium_hydroxide_solution>*144])
+    .fluidOutputs([<liquid:sodiumionsolution>*144, <liquid:aluminumhydroxidesolution>*144])
     .EUt(16)
     .duration(100)
     .buildAndRegister();
 
+// CRYSTALLIZER: Aluminum Hydroxide [Al(OH)4] Solution ==> Aluminum Hydroxide [Al(OH)3] Dust
+mods.nuclearcraft.Crystallizer.addRecipe(<liquid:aluminumhydroxidesolution>*144, <contenttweaker:material_part:9>); /*NO ERROR BUT DID NOT REGISTER RECIPE*/
 
- //mods.nuclearcraft.crystallizer.addRecipe([<fluid:aluminumhydroxidesolution>*144, ]);
-
-
-
-
-
+// PRIMITIVE BLAST FURNACE:
+/*
+val aluminaRecipe = mods.modularmachinery.RecipeBuilder.newBuilder("alumina","t1blastfurnace",240,0);
+aluminaRecipe.addItemInput(*8);
+aluminaRecipe.addItemInput(<gregtech:meta_item_1:10012> * 8);
+aluminaRecipe.addItemOutput(<gregtech:meta_item_1:10061>*8);
+aluminaRecipe.addFluidOutput(<liquid:carbon_monoxide>*2304);
+aluminaRecipe.build();
+*/
