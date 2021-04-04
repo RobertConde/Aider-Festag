@@ -1,0 +1,36 @@
+{
+	title: "Super Primitive Blast Furnace",
+	x: 4.5d,
+	y: -3.5d,
+	shape: "gear",
+	description: "Your source of Lead and Zinc ingots for now",
+	text: [
+		"Don't forget Input/Output buses."
+	],
+	dependencies: [
+		"d75791be"
+	],
+	tasks: [{
+		uid: "56ba3012",
+		type: "item",
+		items: [{
+			item: "modularmachinery:blockcontroller"
+		}]
+	},
+	{
+		uid: "2a189241",
+		type: "item",
+		items: [{
+			item: "minecraft:monster_egg 1 2"
+		}],
+		count: 13L
+	},
+	{
+		uid: "870b24fa",
+		type: "item",
+		items: [{
+			item: "minecraft:brick_block"
+		}],
+		count: 16L
+	}]
+}

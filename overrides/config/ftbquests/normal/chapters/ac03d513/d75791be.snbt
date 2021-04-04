@@ -1,0 +1,54 @@
+{
+	title: "Tier One Miner",
+	x: 2.5d,
+	y: -2.5d,
+	shape: "gear",
+	description: "And it begins...",
+	text: [
+		"You're gonna need an item input, and a large enough item output. "
+	],
+	dependencies: [
+		"778d97b5"
+	],
+	tasks: [{
+		uid: "b3d46c0d",
+		type: "item",
+		items: [{
+			item: "modularmachinery:blockcontroller"
+		}]
+	},
+	{
+		uid: "a569d9d5",
+		type: "item",
+		items: [{
+			item: "minecraft:monster_egg 1 2"
+		}],
+		count: 80L
+	},
+	{
+		uid: "da2a7998",
+		type: "item",
+		items: [{
+			item: "minecraft:glass"
+		}],
+		count: 24L
+	},
+	{
+		uid: "d228b3d2",
+		type: "item",
+		items: [{
+			item: "minecraft:stone 1 2"
+		}],
+		count: 8L
+	}],
+	rewards: [{
+		uid: "3e02b5f3",
+		type: "item",
+		item: "nuclearcraft:cobblestone_generator"
+	},
+	{
+		uid: "7ae57d2b",
+		type: "item",
+		item: "modularmachinery:blockoutputbus 1 4"
+	}]
+}

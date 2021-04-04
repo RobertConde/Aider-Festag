@@ -1,0 +1,11 @@
+{
+	x: -1.5d,
+	y: -0.5d,
+	tasks: [{
+		uid: "0514343d",
+		type: "item",
+		items: [{
+			item: "gregtech:ore_lead_0"
+		}]
+	}]
+}

@@ -1,0 +1,11 @@
+{
+	x: -1.5d,
+	y: 2.5d,
+	tasks: [{
+		uid: "c95fd7e4",
+		type: "item",
+		items: [{
+			item: "gregtech:ore_zinc_0"
+		}]
+	}]
+}

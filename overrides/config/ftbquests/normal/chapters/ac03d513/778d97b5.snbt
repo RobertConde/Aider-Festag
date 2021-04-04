@@ -1,0 +1,23 @@
+{
+	x: 0.5d,
+	y: -2.5d,
+	text: [
+		"Use manufactory to get sand",
+		"",
+		"Then build t1 miner."
+	],
+	dependencies: [
+		"3d3be9e8"
+	],
+	tasks: [{
+		uid: "1556dbab",
+		type: "checkmark",
+		title: "How to Get Started"
+	}],
+	rewards: [{
+		uid: "3ce53395",
+		type: "item",
+		item: "modularmachinery:itemmodularium",
+		count: 64
+	}]
+}

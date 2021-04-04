@@ -1,0 +1,36 @@
+{
+	title: "Basic Pyrolyse Oven",
+	x: 4.5d,
+	y: -1.5d,
+	shape: "gear",
+	description: "Used to make Carbon Ingots.",
+	text: [
+		"Don't forget input/output buses!"
+	],
+	dependencies: [
+		"d75791be"
+	],
+	tasks: [{
+		uid: "a0e7b6c8",
+		type: "item",
+		items: [{
+			item: "modularmachinery:blockcontroller"
+		}]
+	},
+	{
+		uid: "71d90218",
+		type: "item",
+		items: [{
+			item: "minecraft:brick_block"
+		}],
+		count: 14L
+	},
+	{
+		uid: "5083f50b",
+		type: "item",
+		items: [{
+			item: "minecraft:stone_slab 1 5"
+		}],
+		count: 9L
+	}]
+}

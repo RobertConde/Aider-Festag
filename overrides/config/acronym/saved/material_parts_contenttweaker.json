@@ -1,0 +1,10 @@
+{
+  "materialMappings": {
+    "lead(_i_i)_oxide_ingot": 0,
+    "al(_o_h)3dust_dust": 5,
+    "zinc(_i_i)_oxide_dust": 3,
+    "l_vdrillbit_ingot": 4,
+    "lead(_i_i)_oxide_dust": 1,
+    "zinc(_i_i)_oxide_ingot": 2
+  }
+}

@@ -1,0 +1,41 @@
+{
+	x: -2.0d,
+	y: -2.5d,
+	text: [
+		"Just  a Few tips:",
+		"",
+		"-Get familiar with JEI, there are going to be numerous Multiblock machines to help you on your journey!",
+		"",
+		"-The end goal is to obtain EVERY element in the game, including a few custom ones. Although this pack is not set up as an expert pack,",
+		"aquiring every element will require in-depth knowledge of every mod.",
+		"",
+		"-The questbook will be VERY detailed to highlight every refining process.",
+		"",
+		"-Applied Energestics 2 is unlocked at early MV."
+	],
+	tasks: [{
+		uid: "e8a5f940",
+		type: "checkmark",
+		title: "Welcome!"
+	}],
+	rewards: [{
+		uid: "359627d6",
+		type: "item",
+		item: "nuclearcraft:manufactory_idle"
+	},
+	{
+		uid: "106a923e",
+		type: "item",
+		item: "nuclearcraft:cobblestone_generator_compact"
+	},
+	{
+		uid: "1ca52946",
+		type: "item",
+		item: "nuclearcraft:water_source_dense"
+	},
+	{
+		uid: "86362d58",
+		type: "item",
+		item: "nuclearcraft:solar_panel_du"
+	}]
+}

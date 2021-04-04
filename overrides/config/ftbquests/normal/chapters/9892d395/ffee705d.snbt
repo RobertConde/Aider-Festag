@@ -1,0 +1,11 @@
+{
+	x: -1.5d,
+	y: -2.0d,
+	tasks: [{
+		uid: "f3c0b149",
+		type: "item",
+		items: [{
+			item: "thermalfoundation:ore"
+		}]
+	}]
+}
