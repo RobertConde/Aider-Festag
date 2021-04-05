@@ -25,7 +25,14 @@ recipes.addShaped(<gregtech:machine:501> * 1, [[<gregtech:meta_item_1:10018>, <g
 //modularium ingot
 
 recipes.remove(<modularmachinery:itemmodularium>);
-recipes.addShaped(<modularmachinery:itemmodularium> * 1, [[<minecraft:clay_ball>, <minecraft:sand:0>, <minecraft:clay_ball>], [<minecraft:glass>, <minecraft:flint>, <minecraft:brick>],[<minecraft:clay_ball>, <minecraft:sand:0>, <minecraft:clay_ball>]]);
+recipes.addShaped(<modularmachinery:itemmodularium> * 1, [[<minecraft:clay_ball>, <minecraft:sand:0>, <minecraft:clay_ball>], [<minecraft:glass>, null, <minecraft:brick>],[<minecraft:clay_ball>, <minecraft:sand:0>, <minecraft:clay_ball>]]);
+
+mixer.recipeBuilder()
+    .inputs(<minecraft:sand>*2,<minecraft:clay_ball>*4,<minecraft:gravel>*1)
+    .outputs(<modularmachinery:itemmodularium>*2)
+    .EUt(16)
+    .duration(20)
+    .buildAndRegister();
 
 //granite (FOR T1 miner)
 
@@ -287,3 +294,17 @@ blast_furnace.recipeBuilder()
     .buildAndRegister();
 
 //end of EBF recipe transfer
+
+//CIRCUITS
+
+// Integrated Logic Circuit
+recipes.remove(<gregtech:meta_item_2:32487>);
+recipes.addShaped(<gregtech:meta_item_2:32487> * 1, [[<modularmachinery:itemmodularium>, <modularmachinery:itemmodularium>, <modularmachinery:itemmodularium>], [<modularmachinery:itemmodularium>, <gregtech:meta_item_2:32443>, <modularmachinery:itemmodularium>],[<modularmachinery:itemmodularium>, <modularmachinery:itemmodularium>, <modularmachinery:itemmodularium>]]);
+
+// Basic Electronic Circuit
+assembler.findRecipe(8,[<gregtech:meta_item_2:32459>*2,<gregtech:meta_item_2:32447>,<gregtech:meta_item_2:32477>,<gregtech:meta_item_2:16018>],[<liquid:soldering_alloy>*72]).remove();
+assembler.findRecipe(8,[<gregtech:meta_item_2:32459>*2,<gregtech:meta_item_2:32447>,<gregtech:meta_item_2:32477>,<gregtech:meta_item_2:16018>],[<liquid:tin>*144]).remove();
+assembler.findRecipe(8,[<gregtech:meta_item_2:32455>*2,<gregtech:meta_item_2:32447>,<gregtech:meta_item_2:32477>,<gregtech:meta_item_2:16018>],[<liquid:soldering_alloy>*72]).remove();
+assembler.findRecipe(8,[<gregtech:meta_item_2:32455>*2,<gregtech:meta_item_2:32447>,<gregtech:meta_item_2:32477>,<gregtech:meta_item_2:16018>],[<liquid:tin>*144]).remove();
+recipes.addShaped(<gregtech:meta_item_2:32488> * 1, [[<gregtech:meta_item_1:10035>, <gregtech:meta_item_1:10035>, <gregtech:meta_item_1:10035>], [<gregtech:meta_item_1:10012>, <gregtech:meta_item_2:32487>, <gregtech:meta_item_1:10012>],[<gregtech:meta_item_1:10079>, <gregtech:meta_item_1:10079>, <gregtech:meta_item_1:10079>]]);
+
