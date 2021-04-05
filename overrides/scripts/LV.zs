@@ -10,12 +10,17 @@ import crafttweaker.recipes.IRecipeFunction;
 import crafttweaker.recipes.IRecipeAction;
 import crafttweaker.liquid.ILiquidStack;
 
-
-
-
 print("-----------------LOADING LV-----------------");
 
+
+//sand recipes
+mods.nuclearcraft.manufactory.removeAllRecipes();
+mods.nuclearcraft.manufactory.addRecipe([<ore:cobblestone>, <minecraft:sand>]);
+
+//REMOVING AE2 GRINDSTONE
+
 recipes.remove(<appliedenergistics2:grindstone>);
+
 //LV MACHINE HULL
 
 recipes.remove(<gregtech:machine:501>);

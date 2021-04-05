@@ -155,3 +155,4 @@ recipes.addShaped(<modularmachinery:blockfluidoutputhatch:6> * 1, [[null, null, 
 recipes.remove(<modularmachinery:blockfluidoutputhatch:7>);
 recipes.addShaped(<modularmachinery:blockfluidoutputhatch:7> * 1, [[null, null, null], [<modularmachinery:itemmodularium>, <modularmachinery:blockfluidoutputhatch:6>, null],[<modularmachinery:itemmodularium>, <modularmachinery:itemmodularium>, <modularmachinery:itemmodularium>]]);
 
+print("-----------------Finished Loading Thermal Expansion-----------------");

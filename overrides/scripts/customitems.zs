@@ -7,7 +7,7 @@ import mods.contenttweaker.VanillaFactory;
 import mods.contenttweaker.Color;
 import crafttweaker.game.IGame;
 
-print(" ----- Custom Items ----- ");
+print("-----------------Loading Custom Items-----------------");
 
 // Lead(II) Oxide
 var leadOxide = MaterialSystem.getMaterialBuilder().setName("Lead(II) Oxide").setColor(115600).build();
@@ -41,4 +41,4 @@ aluminumhydroxide.registerParts(["ingot","dust"] as string[]);
 var alumina = MaterialSystem.getMaterialBuilder().setName("Alumina [Al2O3]").setColor(456789).build();
 alumina.registerParts(["ingot","dust"] as string[]);
 
-
+print("-----------------Finished Loading Custom Items-----------------");

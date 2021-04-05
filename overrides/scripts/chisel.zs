@@ -2,15 +2,22 @@ import crafttweaker.item.IItemStack;
 import crafttweaker.item.IIngredient;
 import mods.chisel.Carving;
 
-print("-----------------CHISELING MACHINES-----------------");
+print("-----------------Chiseling Machines-----------------");
 
+mods.chisel.Carving.addGroup("TrashCans");
 mods.chisel.Carving.addGroup("LV");
 mods.chisel.Carving.addGroup("MV");
 mods.chisel.Carving.addGroup("HV");
 mods.chisel.Carving.addGroup("EV");
 
-//int[] temp = {50,60,70,80,90,100,110,120,130,140,150,180,190,210,220,230,240,250,260,280,290,300,310,320,330,340,350,360,370,380,390,400}
+//trashcans
+mods.chisel.Carving.addVariation("TrashCans",<trashcans:item_trash_can>);
+mods.chisel.Carving.addVariation("TrashCans",<trashcans:liquid_trash_can>);
+mods.chisel.Carving.addVariation("TrashCans",<trashcans:energy_trash_can>);
 
+recipes.remove(<trashcans:ultimate_trash_can>);
+
+//LV machines
 mods.chisel.Carving.addVariation("LV",<gregtech:machine:501>);
 mods.chisel.Carving.addVariation("LV",<gregtech:machine:50>);
 mods.chisel.Carving.addVariation("LV",<gregtech:machine:60>);
@@ -45,3 +52,4 @@ mods.chisel.Carving.addVariation("LV",<gregtech:machine:390>);
 mods.chisel.Carving.addVariation("LV",<gregtech:machine:400>);
 
 
+print("-----------------Finished Chiseling Machines-----------------");
