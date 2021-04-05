@@ -5,6 +5,12 @@ import mods.modularmachinery.RecipeBuilder;
 import mods.modularmachinery.RecipePrimer;
 import mods.nuclearcraft.manufactory;
 import mods.nuclearcraft.crystallizer;
+import crafttweaker.item.IIngredient;
+import crafttweaker.recipes.IRecipeFunction;
+import crafttweaker.recipes.IRecipeAction;
+import crafttweaker.liquid.ILiquidStack;
+
+
 
 
 print("-----------------LOADING LV-----------------");
@@ -152,11 +158,11 @@ IronIngotRecipe.build();
 
 
 // LV Drill Bit Recipe
-assembler.recipeBuilder()
-    .inputs([<ore:ingotGraphite>,<ore:plateIron>*5])
-    .outputs([<contenttweaker:material_part:4> *16])
-    .duration(60)
-    .EUt(8)
+alloy.recipeBuilder()
+    .inputs(<gregtech:meta_item_1:10095>*1,<minecraft:iron_ingot>*4)
+    .outputs(<contenttweaker:material_part:6>*16)
+    .EUt(4)
+    .duration(80)
     .buildAndRegister();
 
 /* PROCESS: Aluminum Production */
@@ -173,24 +179,111 @@ macerator.findRecipe(12,[<gregtech:meta_item_1:5123>],null).remove();
 hammer.findRecipe(8,[<gregtech:meta_item_1:5123>],null).remove();
 thermal_sep.findRecipe(60,[<gregtech:meta_item_1:5123>],null).remove();
 
+// Add crushed bauxite recipe
+hammer.recipeBuilder()
+    .inputs(<gregtech:ore_bauxite_0>*1)
+    .outputs(<gregtech:meta_item_1:5123>*2)
+    .EUt(8)
+    .duration(40)
+    .buildAndRegister();
+
 // MIXER: Crushed Bauxite + Sodium Hydroxide Solution ==> Sodium Ion Solution + Aluminum Hydroxide [Al(OH)4] Solution
 mixer.recipeBuilder()
-    .inputs([<gregtech:meta_item_1:5123>])
-    .fluidInputs([<nuclearcraft:fluid_sodium_hydroxide_solution>*144])
-    .fluidOutputs([<liquid:sodiumionsolution>*144, <liquid:aluminumhydroxidesolution>*144])
+    .inputs(<gregtech:meta_item_1:5123>*1)
+    .fluidInputs([<liquid:sodium_hydroxide_solution>*144])
+    .fluidOutputs([<liquid:aluminumhydroxidesolution>*144])
+    .outputs(<gregtech:meta_item_1:2063>*1)
     .EUt(16)
     .duration(100)
     .buildAndRegister();
 
 // CRYSTALLIZER: Aluminum Hydroxide [Al(OH)4] Solution ==> Aluminum Hydroxide [Al(OH)3] Dust
-mods.nuclearcraft.Crystallizer.addRecipe(<liquid:aluminumhydroxidesolution>*144, <contenttweaker:material_part:9>); /*NO ERROR BUT DID NOT REGISTER RECIPE*/
+mods.nuclearcraft.crystallizer.addRecipe([<liquid:aluminumhydroxidesolution>*144, <contenttweaker:material_part:9>]); /*NO ERROR BUT DID NOT REGISTER RECIPE*/
 
-// PRIMITIVE BLAST FURNACE:
-/*
-val aluminaRecipe = mods.modularmachinery.RecipeBuilder.newBuilder("alumina","t1blastfurnace",240,0);
-aluminaRecipe.addItemInput(*8);
-aluminaRecipe.addItemInput(<gregtech:meta_item_1:10012> * 8);
-aluminaRecipe.addItemOutput(<gregtech:meta_item_1:10061>*8);
-aluminaRecipe.addFluidOutput(<liquid:carbon_monoxide>*2304);
-aluminaRecipe.build();
-*/
+//processing sodiumionsolution
+
+val sodiumIonRecipe = mods.modularmachinery.RecipeBuilder.newBuilder("sodiumdust","ionizer",20,0);
+sodiumIonRecipe.addFluidInput(<liquid:sodiumionsolution>*144);
+sodiumIonRecipe.addItemOutput(<gregtech:meta_item_1:2063>*1);
+sodiumIonRecipe.build();
+
+// aluminum hydroxide -> alumina
+
+furnace.addRecipe(<contenttweaker:material_part:11>,<contenttweaker:material_part:9>);
+
+//hall-hreoult process
+
+val moltenAluminumRecipe = mods.modularmachinery.RecipeBuilder.newBuilder("moltenaluminum","hallheroult",240,0);
+moltenAluminumRecipe.addFluidInput(<liquid:water>*144);
+moltenAluminumRecipe.addItemInput(<contenttweaker:material_part:11>*1);
+moltenAluminumRecipe.addFluidOutput(<liquid:aluminium>*144);
+moltenAluminumRecipe.addEnergyPerTickInput(8);
+moltenAluminumRecipe.build();
+//then run through fluid solidifier for aluminium ingot
+
+//REMOVING ALUMINIUM RECIPES IN GREGTECH
+recipes.remove(<gregtech:meta_item_1:10001>);
+blast_furnace.findRecipe(100,[<gregtech:meta_item_1:2154>],null).remove();
+blast_furnace.findRecipe(100,[<gregtech:meta_item_1:8154>],null).remove();
+blast_furnace.findRecipe(100,[<gregtech:meta_item_1:2117>],null).remove();
+blast_furnace.findRecipe(100,[<gregtech:meta_item_1:8117>],null).remove();
+blast_furnace.findRecipe(100,[<gregtech:meta_item_1:2157>],null).remove();
+blast_furnace.findRecipe(100,[<gregtech:meta_item_1:8157>],null).remove();
+
+
+//END OF ALUMINUM
+
+
+
+// EBF Recipes for super primitive blast furnace 
+blast_furnace.recipeBuilder()
+    .inputs(<gregtech:ore_lead_0>*2)
+    .outputs(<contenttweaker:material_part:1>*2)
+    .fluidOutputs([<liquid:sulfur_dioxide>*288])
+    .EUt(120)
+    .duration(80)
+    .buildAndRegister();
+
+blast_furnace.recipeBuilder()
+    .inputs(<contenttweaker:material_part:1>*2,<gregtech:meta_item_1:10012>)
+    .outputs(<gregtech:meta_item_1:10035>*2)
+    .fluidOutputs([<liquid:carbon_monoxide>*288])
+    .EUt(120)
+    .duration(80)
+    .buildAndRegister();
+
+blast_furnace.recipeBuilder()
+    .inputs(<gregtech:ore_zinc_0>*2)
+    .outputs(<contenttweaker:material_part:3>*2)
+    .fluidOutputs([<liquid:sulfur_dioxide>*288])
+    .EUt(120)
+    .duration(80)
+    .buildAndRegister();
+
+blast_furnace.recipeBuilder()
+    .inputs(<contenttweaker:material_part:3>*2,<gregtech:meta_item_1:10012>)
+    .outputs(<gregtech:meta_item_1:10079>*2)
+    .fluidOutputs([<liquid:carbon_monoxide>*288])
+    .EUt(120)
+    .duration(80)
+    .buildAndRegister();
+
+blast_furnace.recipeBuilder()
+    .inputs(<minecraft:sand>*1)
+    .outputs(<gregtech:meta_item_1:10061>*1)
+    .fluidOutputs([<liquid:carbon_monoxide>*144])
+    .EUt(120)
+    .duration(80)
+    .buildAndRegister();
+
+
+blast_furnace.recipeBuilder()
+    .inputs(<gregtech:ore_magnetite_0>)
+    .fluidInputs([<liquid:carbon_monoxide>*576])
+    .outputs(<minecraft:iron_ingot>*3)
+    .fluidOutputs([<liquid:carbon_dioxide>*576])
+    .EUt(80)
+    .duration(240)
+    .buildAndRegister();
+
+//end of EBF recipe transfer
