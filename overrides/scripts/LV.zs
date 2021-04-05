@@ -11,7 +11,13 @@ import crafttweaker.recipes.IRecipeAction;
 import crafttweaker.liquid.ILiquidStack;
 
 print("-----------------LOADING LV-----------------");
+// Chisel
+recipes.remove(<chisel:chisel_iron>);
+recipes.addShaped(<chisel:chisel_iron> * 1, [[null, <gregtech:meta_item_1:10197>, null], [<minecraft:stick>, null, null],[null, null, null]]);
 
+//manufactory recipe
+recipes.remove(<nuclearcraft:manufactory_idle>);
+recipes.addShaped(<nuclearcraft:manufactory_idle> * 1, [[<nuclearcraft:part:0>, <gregtech:meta_item_2:32488>, <nuclearcraft:part:0>], [<gregtech:meta_item_2:32488>, <gregtech:machine:501>, <gregtech:meta_item_2:32488>],[<nuclearcraft:part:0>, <gregtech:meta_item_2:32488>, <nuclearcraft:part:0>]]);
 
 //sand recipes
 mods.nuclearcraft.manufactory.removeAllRecipes();

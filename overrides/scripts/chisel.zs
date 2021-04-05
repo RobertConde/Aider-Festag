@@ -1,14 +1,30 @@
 import crafttweaker.item.IItemStack;
 import crafttweaker.item.IIngredient;
 import mods.chisel.Carving;
+import mods.nuclearcraft.extractor;
+import mods.nuclearcraft.ingot_former;
+import mods.nuclearcraft.melter;
+
+
+
 
 print("-----------------Chiseling Machines-----------------");
 
 mods.chisel.Carving.addGroup("TrashCans");
+mods.chisel.Carving.addGroup("Nuclear");
 mods.chisel.Carving.addGroup("LV");
 mods.chisel.Carving.addGroup("MV");
 mods.chisel.Carving.addGroup("HV");
 mods.chisel.Carving.addGroup("EV");
+
+//nuclearcraft
+mods.nuclearcraft.extractor.removeAllRecipes();
+mods.nuclearcraft.ingot_former.removeAllRecipes();
+mods.nuclearcraft.melter.removeAllRecipes();
+mods.chisel.Carving.addVariation("Nuclear",<nuclearcraft:manufactory_idle>);
+mods.chisel.Carving.addVariation("Nuclear",<nuclearcraft:crystallizer_idle>);
+
+
 
 //trashcans
 mods.chisel.Carving.addVariation("TrashCans",<trashcans:item_trash_can>);
@@ -16,6 +32,8 @@ mods.chisel.Carving.addVariation("TrashCans",<trashcans:liquid_trash_can>);
 mods.chisel.Carving.addVariation("TrashCans",<trashcans:energy_trash_can>);
 
 recipes.remove(<trashcans:ultimate_trash_can>);
+
+
 
 //LV machines
 mods.chisel.Carving.addVariation("LV",<gregtech:machine:501>);
