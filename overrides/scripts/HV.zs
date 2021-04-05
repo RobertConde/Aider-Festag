@@ -1,0 +1,11 @@
+import mods.gregtech.recipe.RecipeMap;
+import mods.gregtech.material.MaterialRegistry;
+import crafttweaker.item.IItemStack;
+import mods.modularmachinery.RecipeBuilder;
+import mods.modularmachinery.RecipePrimer;
+import mods.nuclearcraft.manufactory;
+import mods.nuclearcraft.crystallizer;
+import crafttweaker.item.IIngredient;
+import crafttweaker.recipes.IRecipeFunction;
+import crafttweaker.recipes.IRecipeAction;
+import crafttweaker.liquid.ILiquidStack;

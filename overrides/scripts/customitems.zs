@@ -41,4 +41,33 @@ aluminumhydroxide.registerParts(["ingot","dust"] as string[]);
 var alumina = MaterialSystem.getMaterialBuilder().setName("Alumina [Al2O3]").setColor(456789).build();
 alumina.registerParts(["ingot","dust"] as string[]);
 
+//99.5% gold
+
+var impuregold = MaterialSystem.getMaterialBuilder().setName("99.5% Pure Gold").setColor(9419).build();
+impuregold.registerParts(["dust"] as string[]);
+
+//copper chloride
+
+var copperchloride = MaterialSystem.getMaterialBuilder().setName("Copper Chloride").setColor(9419).build();
+copperchloride.registerParts(["dust"] as string[]);
+
+//Dore bar
+
+var dorebar = MaterialSystem.getMaterialBuilder().setName("Dore Bar").setColor(192348).build();
+dorebar.registerParts(["ingot","block"] as string[]);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 print("-----------------Finished Loading Custom Items-----------------");
