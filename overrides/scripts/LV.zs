@@ -51,18 +51,18 @@ mods.nuclearcraft.manufactory.addRecipe([<minecraft:stonebrick>,<minecraft:stone
 
 //T1miner
 
-val TierOneMinerRecipe = mods.modularmachinery.RecipeBuilder.newBuilder("T1MINE","t1miner",100,0);
+val TierOneMiner = mods.modularmachinery.RecipeBuilder.newBuilder("T1MINE","t1miner",100,0);
 
-TierOneMinerRecipe.addItemInput(<minecraft:cobblestone>*4);
-TierOneMinerRecipe.addItemOutput(<gregtech:ore_lead_0>*1);
-TierOneMinerRecipe.addItemOutput(<gregtech:ore_copper_0>*1);
-TierOneMinerRecipe.addItemOutput(<gregtech:ore_tin_0>*1);
-TierOneMinerRecipe.addItemOutput(<gregtech:meta_item_1:2065>*1);
-TierOneMinerRecipe.addItemOutput(<gregtech:ore_magnetite_0>*1);
-TierOneMinerRecipe.addItemOutput(<gregtech:ore_zinc_0>*1);
-TierOneMinerRecipe.addItemOutput(<minecraft:clay_ball>*4);
-TierOneMinerRecipe.addItemOutput(<gregtech:meta_item_1:32627>*1);
-TierOneMinerRecipe.build();
+TierOneMiner.addItemInput(<minecraft:cobblestone>*4);
+TierOneMiner.addItemOutput(<gregtech:ore_lead_0>*1);
+TierOneMiner.addItemOutput(<gregtech:ore_copper_0>*1);
+TierOneMiner.addItemOutput(<gregtech:ore_tin_0>*1);
+TierOneMiner.addItemOutput(<gregtech:meta_item_1:2065>*1);
+TierOneMiner.addItemOutput(<gregtech:ore_magnetite_0>*1);
+TierOneMiner.addItemOutput(<gregtech:ore_zinc_0>*1);
+TierOneMiner.addItemOutput(<minecraft:clay_ball>*4);
+TierOneMiner.addItemOutput(<gregtech:meta_item_1:32627>*1);
+TierOneMiner.build();
 
 //carbon ingot
 
@@ -319,3 +319,14 @@ assembler.findRecipe(8,[<gregtech:meta_item_2:32455>*2,<gregtech:meta_item_2:324
 assembler.findRecipe(8,[<gregtech:meta_item_2:32455>*2,<gregtech:meta_item_2:32447>,<gregtech:meta_item_2:32477>,<gregtech:meta_item_2:16018>],[<liquid:tin>*144]).remove();
 recipes.addShaped(<gregtech:meta_item_2:32488> * 1, [[<gregtech:meta_item_1:10035>, <gregtech:meta_item_1:10035>, <gregtech:meta_item_1:10035>], [<gregtech:meta_item_1:10012>, <gregtech:meta_item_2:32487>, <gregtech:meta_item_1:10012>],[<gregtech:meta_item_1:10079>, <gregtech:meta_item_1:10079>, <gregtech:meta_item_1:10079>]]);
 
+//LV MINER
+
+val TierTwoMinerRecipe = mods.modularmachinery.RecipeBuilder.newBuilder("T2MINE","t2miner",100,0);
+
+TierTwoMinerRecipe.addItemInput(<contenttweaker:material_part:6>*1);
+TierTwoMinerRecipe.addFluidInput(<liquid:sulfuric_acid>*4);
+TierTwoMinerRecipe.addItemOutput(<gregtech:ore_silver_0>*1);
+TierTwoMinerRecipe.addItemOutput(<gregtech:ore_bauxite_0>*1);
+TierTwoMinerRecipe.addItemOutput(<minecraft:gold_ore>*1);
+TierTwoMinerRecipe.addItemOutput(<gregtech:ore_nickel_0>*1);
+TierTwoMinerRecipe.build();

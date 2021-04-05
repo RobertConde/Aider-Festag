@@ -48,7 +48,7 @@ impuregold.registerParts(["dust"] as string[]);
 
 //copper chloride
 
-var copperchloride = MaterialSystem.getMaterialBuilder().setName("Copper Chloride").setColor(9419).build();
+var copperchloride = MaterialSystem.getMaterialBuilder().setName("Copper Chloride").setColor(126304).build();
 copperchloride.registerParts(["dust"] as string[]);
 
 //Dore bar
