@@ -64,6 +64,14 @@ TierOneMiner.addItemOutput(<minecraft:clay_ball>*4);
 TierOneMiner.addItemOutput(<gregtech:meta_item_1:32627>*1);
 TierOneMiner.build();
 
+//easy steel recipe
+
+val EZsteel = mods.modularmachinery.RecipeBuilder.newBuilder("ezsteel","t1blastfurnace",80,0);
+EZsteel.addItemInput(<ore:ingotIron>*1);
+EZsteel.addItemInput(<ore:ingotCarbon>*1);
+Ezsteel.addItemOutput(<gregtech:meta_item_1:10184>);
+Ezsteel.build();
+
 //carbon ingot
 
 val CarbonIngotRecipe = mods.modularmachinery.RecipeBuilder.newBuilder("carbonIngot","basicPyroOven",1200,0);
@@ -324,9 +332,101 @@ recipes.addShaped(<gregtech:meta_item_2:32488> * 1, [[<gregtech:meta_item_1:1003
 val TierTwoMinerRecipe = mods.modularmachinery.RecipeBuilder.newBuilder("T2MINE","t2miner",100,0);
 
 TierTwoMinerRecipe.addItemInput(<contenttweaker:material_part:6>*1);
-TierTwoMinerRecipe.addFluidInput(<liquid:sulfuric_acid>*4);
-TierTwoMinerRecipe.addItemOutput(<gregtech:ore_silver_0>*1);
-TierTwoMinerRecipe.addItemOutput(<gregtech:ore_bauxite_0>*1);
-TierTwoMinerRecipe.addItemOutput(<minecraft:gold_ore>*1);
-TierTwoMinerRecipe.addItemOutput(<gregtech:ore_nickel_0>*1);
+TierTwoMinerRecipe.addFluidInput(<liquid:sulfuric_acid>*8);
+TierTwoMinerRecipe.addItemOutput(<gregtech:ore_silver_0>*6);
+TierTwoMinerRecipe.addItemOutput(<gregtech:ore_bauxite_0>*6);
+TierTwoMinerRecipe.addItemOutput(<minecraft:gold_ore>*6);
+TierTwoMinerRecipe.addItemOutput(<gregtech:ore_nickel_0>*6);
+TierTwoMinerRecipe.addItemOutput(<gregtech:ore_chromite_0>*6);
 TierTwoMinerRecipe.build();
+
+//Chromium process
+
+//removing chromite recipes
+macerator.findRecipe(12,[<gregtech:ore_chromite_0>],null).remove();
+hammer.findRecipe(6,[<gregtech:ore_chromite_0>],null).remove();
+electrolyzer.findRecipe(60,[<gregtech:meta_item_1:2102>*7],null).remove();
+
+//sodium carbonate reaction
+chemreactor.recipeBuilder()
+    .inputs(<gregtech:meta_item_1:2155>*1)
+    .fluidInputs([<liquid:water>*144,<liquid:carbon_dioxide>*144,<liquid:ammonia>*144])
+    .outputs(<contenttweaker:material_part:16>*1)
+    .fluidOutputs(<liquid:ammoniumchloride>*144)
+    .EUt(16)
+    .duration(190)
+    .buildAndRegister();
+
+//processing waste from reaction
+electrolyzer.recipeBuilder()
+    .fluidInputs([<liquid:ammoniumchloride>*144])
+    .fluidOutputs([<liquid:hydrochloric_acid>*144,<liquid:ammonia>*144])
+    .EUt(60)
+    .duration(190)
+    .buildAndRegister();
+
+//first step in processing ore
+
+chemreactor.recipeBuilder()
+    .inputs(<gregtech:meta_item_1:2102>*4,<contenttweaker:material_part:16>*8)
+    .fluidInputs([<liquid:oxygen>*1008])
+    .outputs(<contenttweaker:material_part:21>*1)
+    .fluidOutputs([<liquid:carbon_dioxide>*1152])
+    .EUt(32)
+    .duration(300)
+    .buildAndRegister();
+
+//second processing step 
+
+chemreactor.recipeBuilder()
+    .inputs(<contenttweaker:material_part:18>*2)
+    .fluidInputs([<liquid:sulfuric_acid>*144])
+    .outputs(<contenttweaker:material_part:22>*1)
+    .fluidOutputs([<liquid:water>*144])
+    .EUt(32)
+    .duration(60)
+    .buildAndRegister();
+
+//processing waste
+
+electrolyzer.recipeBuilder()
+    .inputs(<contenttweaker:material_part:17>*1)
+    .outputs(<gregtech:meta_item_1:2063>*1,<gregtech:meta_item_1:2065>*1)
+    .fluidOutputs([<liquid:oxygen>*576])
+    .EUt(8)
+    .duration(150)
+    .buildAndRegister();
+
+centrifuge.recipeBuilder()
+    .inputs(<contenttweaker:material_part:21>*1)
+    .outputs(<contenttweaker:material_part:18>*8,<gregtech:ore_magnetite_0>*2)
+    .EUt(8)
+    .duration(20)
+    .buildAndRegister();
+
+centrifuge.recipeBuilder()
+    .inputs(<contenttweaker:material_part:22>*1)
+    .outputs(<contenttweaker:material_part:19>*1,<contenttweaker:material_part:17>*1)
+    .EUt(8)
+    .duration(20)
+    .buildAndRegister();
+
+//third processing step.
+
+blast_furnace.recipeBuilder()
+    .inputs(<contenttweaker:material_part:19>*1,<ore:ingotCarbon>*1)
+    .outputs(<contenttweaker:material_part:16>*1,<contenttweaker:material_part:20>*1)
+    .fluidOutputs([<liquid:carbon_monoxide>*144])
+    .EUt(32)
+    .duration(160)
+    .buildAndRegister();
+
+//final processing step
+
+blast_furnace.recipeBuilder()
+    .inputs(<contenttweaker:material_part:20>*1, <ore:ingotAluminium>*2)
+    .outputs(<contenttweaker:material_part:11>*1,<gregtech:meta_item_1:10016>*2)
+    .EUt(32)
+    .duration(240)
+    .buildAndRegister();
+

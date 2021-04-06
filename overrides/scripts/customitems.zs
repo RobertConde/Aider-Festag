@@ -56,6 +56,48 @@ copperchloride.registerParts(["dust"] as string[]);
 var dorebar = MaterialSystem.getMaterialBuilder().setName("Dore Bar").setColor(192348).build();
 dorebar.registerParts(["ingot","block"] as string[]);
 
+//sodium carbonate 15
+
+var sodiumcarbonate = MaterialSystem.getMaterialBuilder().setName("Sodium Carbonate").setColor(126304).build();
+sodiumcarbonate.registerParts(["dust"] as string[]);
+
+//ammonium chloride
+
+var ammoniumchloride = VanillaFactory.createFluid("ammoniumchloride", Color.fromHex("c42d61"));    // NOTE: Unlocalized name should be ENTIRELY lowercase.
+ammoniumchloride.register();   // Localized name is in lang file
+
+//sodium sulfate 16+1
+
+var sodiumsulfate = MaterialSystem.getMaterialBuilder().setName("Sodium Sulfate").setColor(514569).build();
+sodiumsulfate.registerParts(["dust"] as string[]);
+
+//sodium chromate 17+1
+
+var sodiumchromate = MaterialSystem.getMaterialBuilder().setName("Sodium Chromate").setColor(489613).build();
+sodiumchromate.registerParts(["dust"] as string[]);
+
+//sodium dichromate 18+1
+
+var sodiumdichromate = MaterialSystem.getMaterialBuilder().setName("Sodium Dichromate").setColor(984213).build();
+sodiumdichromate.registerParts(["dust"] as string[]);
+
+//chromium (III) oxide 19+1
+
+var chromiumoxide = MaterialSystem.getMaterialBuilder().setName("Chromium(III) Oxide").setColor(87421).build();
+chromiumoxide.registerParts(["dust"] as string[]);
+
+//chromium (III) oxide 21
+
+var crproducts = MaterialSystem.getMaterialBuilder().setName("Chromite Reaction Products").setColor(87421).build();
+crproducts.registerParts(["dust"] as string[]);
+
+//chromium (III) oxide 22
+
+var scproducts = MaterialSystem.getMaterialBuilder().setName("Sodium Chromate Products").setColor(87421).build();
+scproducts.registerParts(["dust"] as string[]);
+
+
+
 
 
 
