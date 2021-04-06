@@ -10,31 +10,26 @@ import crafttweaker.recipes.IRecipeFunction;
 import crafttweaker.recipes.IRecipeAction;
 import crafttweaker.liquid.ILiquidStack;
 
-print("-----------------LOADING LV-----------------");
-// Chisel
+// Chisel Recipe
 recipes.remove(<chisel:chisel_iron>);
 recipes.addShaped(<chisel:chisel_iron> * 1, [[null, <gregtech:meta_item_1:10197>, null], [<minecraft:stick>, null, null],[null, null, null]]);
 
-//manufactory recipe
+// Manufactory Recipe
 recipes.remove(<nuclearcraft:manufactory_idle>);
 recipes.addShaped(<nuclearcraft:manufactory_idle> * 1, [[<nuclearcraft:part:0>, <gregtech:meta_item_2:32488>, <nuclearcraft:part:0>], [<gregtech:meta_item_2:32488>, <gregtech:machine:501>, <gregtech:meta_item_2:32488>],[<nuclearcraft:part:0>, <gregtech:meta_item_2:32488>, <nuclearcraft:part:0>]]);
 
-//sand recipes
+// Sand Recipes
+recipes.remove(<appliedenergistics2:grindstone>);   // Remove AE grindstone
+
 mods.nuclearcraft.manufactory.removeAllRecipes();
 mods.nuclearcraft.manufactory.addRecipe([<ore:cobblestone>, <minecraft:sand>]);
 
-//REMOVING AE2 GRINDSTONE
-
-recipes.remove(<appliedenergistics2:grindstone>);
-
-//LV MACHINE HULL
-
+// LV MAchine Hull
 recipes.remove(<gregtech:machine:501>);
 assembler.findRecipe(16, [<gregtech:cable:5071>*2,<gregtech:machine_casing:1>],null).remove();
 recipes.addShaped(<gregtech:machine:501> * 1, [[<gregtech:meta_item_1:10018>, <gregtech:meta_item_1:10035>, <gregtech:meta_item_1:10012>], [<gregtech:meta_item_1:10197>, null, <gregtech:meta_item_1:10079>],[<modularmachinery:itemmodularium>, <gregtech:meta_item_1:2065>, <gregtech:meta_item_1:10071>]]);
 
-//modularium ingot
-
+// Modularium Ingot
 recipes.remove(<modularmachinery:itemmodularium>);
 recipes.addShaped(<modularmachinery:itemmodularium> * 1, [[<minecraft:clay_ball>, <minecraft:sand:0>, <minecraft:clay_ball>], [<minecraft:glass>, null, <minecraft:brick>],[<minecraft:clay_ball>, <minecraft:sand:0>, <minecraft:clay_ball>]]);
 
@@ -45,12 +40,10 @@ mixer.recipeBuilder()
     .duration(20)
     .buildAndRegister();
 
-//granite (FOR T1 miner)
-
+// Granite (for T1 Miner)
 mods.nuclearcraft.manufactory.addRecipe([<minecraft:stonebrick>,<minecraft:stone:1>]);
 
-//T1miner
-
+// T1 Miner
 val TierOneMiner = mods.modularmachinery.RecipeBuilder.newBuilder("T1MINE","t1miner",100,0);
 
 TierOneMiner.addItemInput(<minecraft:cobblestone>*4);
@@ -64,30 +57,21 @@ TierOneMiner.addItemOutput(<minecraft:clay_ball>*4);
 TierOneMiner.addItemOutput(<gregtech:meta_item_1:32627>*1);
 TierOneMiner.build();
 
-//easy steel recipe
-
+/* PROCESS: Steel */
 val EZsteel = mods.modularmachinery.RecipeBuilder.newBuilder("ezsteel","t1blastfurnace",80,0);
 EZsteel.addItemInput(<ore:ingotIron>*1);
 EZsteel.addItemInput(<ore:ingotCarbon>*1);
 Ezsteel.addItemOutput(<gregtech:meta_item_1:10184>);
 Ezsteel.build();
 
-//carbon ingot
-
+/* PROCESS: Carbon */
 val CarbonIngotRecipe = mods.modularmachinery.RecipeBuilder.newBuilder("carbonIngot","basicPyroOven",1200,0);
-
 CarbonIngotRecipe.addItemInput(<minecraft:coal:1> * 16);
 CarbonIngotRecipe.addItemOutput(<gregtech:meta_item_1:10012> * 16);
 CarbonIngotRecipe.build();
 
-/*
-
-LEAD PROCESS
-
-*/
-
+/* PROCESS: Lead*/
 val LeadOxideRecipe = mods.modularmachinery.RecipeBuilder.newBuilder("leadOxide","t1blastfurnace",80,0);
-
 LeadOxideRecipe.addItemInput(<gregtech:ore_lead_0> * 2);
 LeadOxideRecipe.addItemInput(<minecraft:coal:1> * 2);
 LeadOxideRecipe.addItemOutput(<contenttweaker:material_part:1>*2);
@@ -95,29 +79,21 @@ LeadOxideRecipe.addFluidOutput(<liquid:sulfur_dioxide>*288);
 LeadOxideRecipe.build();
 
 val LeadIngotRecipe = mods.modularmachinery.RecipeBuilder.newBuilder("leadingot","t1blastfurnace",80,0);
-
 LeadIngotRecipe.addItemInput(<contenttweaker:material_part:1>*2);
 LeadIngotRecipe.addItemInput(<gregtech:meta_item_1:10012>*1);
 LeadIngotRecipe.addFluidOutput(<liquid:carbon_dioxide>*144);
 LeadIngotRecipe.addItemOutput(<gregtech:meta_item_1:10035>*2);
 LeadIngotRecipe.build();
 
-//deleting lead ore recipes
-
+// Removing lead ore recipes
 furnace.remove(<gregtech:meta_item_1:10035>);
 recipes.remove(<gregtech:meta_item_1:10035>);
 fluid_extractor.findRecipe(48,[<gregtech:ore_lead_0>],null).remove();
 macerator.findRecipe(12,[<gregtech:ore_lead_0>],null).remove();
 hammer.findRecipe(6,[<gregtech:ore_lead_0>],null).remove();
 
-/*
-
-ZINC PROCESS
-
-*/
-
+/* PROCESS: Zinc */
 val ZincOxideRecipe = mods.modularmachinery.RecipeBuilder.newBuilder("zincOxide","t1blastfurnace",80,0);
-
 ZincOxideRecipe.addItemInput(<gregtech:ore_zinc_0>*2);
 ZincOxideRecipe.addItemInput(<minecraft:coal:1> * 2);
 ZincOxideRecipe.addItemOutput(<contenttweaker:material_part:3>*2);
@@ -125,63 +101,48 @@ ZincOxideRecipe.addFluidOutput(<liquid:sulfur_dioxide>*288);
 ZincOxideRecipe.build();
 
 val ZincIngotRecipe = mods.modularmachinery.RecipeBuilder.newBuilder("zincingot","t1blastfurnace",80,0);
-
 ZincIngotRecipe.addItemInput(<contenttweaker:material_part:3>*2);
 ZincIngotRecipe.addItemInput(<gregtech:meta_item_1:10012>*1);
 ZincIngotRecipe.addFluidOutput(<liquid:carbon_dioxide>*144);
 ZincIngotRecipe.addItemOutput(<gregtech:meta_item_1:10079>*2);
 ZincIngotRecipe.build();
 
-//deleting zinc ore recipes
-
+// Removing zinc ore recipes
 recipes.remove(<gregtech:meta_item_1:10079>);
 furnace.remove(<gregtech:meta_item_1:10079>);
 fluid_extractor.findRecipe(48,[<gregtech:ore_zinc_0>],null).remove();
 macerator.findRecipe(12,[<gregtech:ore_zinc_0>],null).remove();
 hammer.findRecipe(6,[<gregtech:ore_zinc_0>],null).remove();
 
-//deleting copper ore recipes
+// Removing copper ore recipes
 fluidextractor.findRecipe(48,[<gregtech:ore_copper_0>],null).remove();
 macerator.findRecipe(12,[<gregtech:ore_copper_0>],null).remove();
 hammer.findRecipe(6,[<gregtech:ore_copper_0>],null).remove();
 
-//silicon
-
+/* PROCESS: Silicon */
 mods.nuclearcraft.manufactory.removeRecipeWithOutput([<gregtech:meta_item_1:10061>]);
 
-val aluminaRecipe = mods.modularmachinery.RecipeBuilder.newBuilder("silicon","t1blastfurnace",240,0);
-aluminaRecipe.addItemInput(<minecraft:sand>*8);
-aluminaRecipe.addItemInput(<gregtech:meta_item_1:10012> * 8);
-aluminaRecipe.addItemOutput(<gregtech:meta_item_1:10061>*8);
-aluminaRecipe.addFluidOutput(<liquid:carbon_monoxide>*2304);
-aluminaRecipe.build();
+val siliconRecipe = mods.modularmachinery.RecipeBuilder.newBuilder("silicon","t1blastfurnace",240,0);
+siliconRecipe.addItemInput(<minecraft:sand>*8);
+siliconRecipe.addItemInput(<gregtech:meta_item_1:10012> * 8);
+siliconRecipe.addItemOutput(<gregtech:meta_item_1:10061>*8);
+siliconRecipe.addFluidOutput(<liquid:carbon_monoxide>*2304);
+siliconRecipe.build();
 
-/*
-
-WROUGHT IRON PROCESS
-
-*/
-
+/* PROCESS: Wrought Iron */
 recipes.remove(<gregtech:meta_item_1:2131>);
 furnace.remove(<minecraft:iron_ingot>,<gregtech:ore_magnetite_0>);
 macerator.findRecipe(12,[<gregtech:ore_magnetite_0>],null).remove();
 hammer.findRecipe(6,[<gregtech:ore_magnetite_0>],null).remove();
 furnace.addRecipe(<gregtech:meta_item_1:10197>,<gregtech:ore_magnetite_0>);
 
-/*
-
-IRON PROCESS
-
-*/
-
+/* PROCESS: Iron */
 val IronIngotRecipe = mods.modularmachinery.RecipeBuilder.newBuilder("ironingot","t1blastfurnace",240,0);
-
 IronIngotRecipe.addItemInput(<gregtech:ore_magnetite_0>);
 IronIngotRecipe.addFluidInput(<liquid:carbon_monoxide>*576);
 IronIngotRecipe.addItemOutput(<minecraft:iron_ingot>*3);
 IronIngotRecipe.addFluidOutput(<liquid:carbon_dioxide>*576);
 IronIngotRecipe.build();
-
 
 // LV Drill Bit Recipe
 alloy.recipeBuilder()
@@ -191,8 +152,7 @@ alloy.recipeBuilder()
     .duration(80)
     .buildAndRegister();
 
-/* PROCESS: Aluminum Production */
-
+/* PROCESS: Aluminum */
 // Remove bauxite recipes
 recipes.remove(<gregtech:meta_item_1:2123>);
 furnace.remove(<gregtech:meta_item_1:2123>);
@@ -205,7 +165,7 @@ macerator.findRecipe(12,[<gregtech:meta_item_1:5123>],null).remove();
 hammer.findRecipe(8,[<gregtech:meta_item_1:5123>],null).remove();
 thermal_sep.findRecipe(60,[<gregtech:meta_item_1:5123>],null).remove();
 
-// Add crushed bauxite recipe
+// Crushed Bauxite Recipe
 hammer.recipeBuilder()
     .inputs(<gregtech:ore_bauxite_0>*1)
     .outputs(<gregtech:meta_item_1:5123>*2)
@@ -213,7 +173,7 @@ hammer.recipeBuilder()
     .duration(40)
     .buildAndRegister();
 
-// MIXER: Crushed Bauxite + Sodium Hydroxide Solution ==> Sodium Ion Solution + Aluminum Hydroxide [Al(OH)4] Solution
+// Mixer | Crushed Bauxite + Sodium Hydroxide Solution ==> Sodium Ion Solution + Aluminum Hydroxide [Al(OH)4] Solution
 mixer.recipeBuilder()
     .inputs(<gregtech:meta_item_1:5123>*1)
     .fluidInputs([<liquid:sodium_hydroxide_solution>*144])
