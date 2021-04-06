@@ -183,8 +183,8 @@ mixer.recipeBuilder()
     .duration(100)
     .buildAndRegister();
 
-// Crystallizer | Aluminum Hydroxide [Al(OH)4] Solution ==> Aluminum Hydroxide [Al(OH)3] Dust
-mods.nuclearcraft.crystallizer.addRecipe([<liquid:aluminumhydroxidesolution>*144, <contenttweaker:material_part:9>]); /*NO ERROR BUT DID NOT REGISTER RECIPE*/
+// CRYSTALLIZER: Aluminum Hydroxide [Al(OH)4] Solution ==> Aluminum Hydroxide [Al(OH)3] Dust
+mods.nuclearcraft.crystallizer.addRecipe([<liquid:aluminumhydroxidesolution>*1440, <contenttweaker:material_part:9>*10]); /*NO ERROR BUT DID NOT REGISTER RECIPE*/
 
 //processing sodiumionsolution
 
