@@ -14,17 +14,19 @@ mods.chisel.Carving.addGroup("HV");
 mods.chisel.Carving.addGroup("EV");
 
 // Nuclearcraft
-mods.nuclearcraft.extractor.removeAllRecipes();
-mods.nuclearcraft.ingot_former.removeAllRecipes();
-mods.nuclearcraft.melter.removeAllRecipes();
 mods.chisel.Carving.addVariation("nuclearcraft",<nuclearcraft:manufactory_idle>);
 mods.chisel.Carving.addVariation("nuclearcraft",<nuclearcraft:crystallizer_idle>);
 
+mods.nuclearcraft.extractor.removeAllRecipes();
+mods.nuclearcraft.ingot_former.removeAllRecipes();
+mods.nuclearcraft.melter.removeAllRecipes();
+
 // Trash Cans
-recipes.remove(<trashcans:ultimate_trash_can>);
 mods.chisel.Carving.addVariation("trashcans",<trashcans:item_trash_can>);
 mods.chisel.Carving.addVariation("trashcans",<trashcans:liquid_trash_can>);
 mods.chisel.Carving.addVariation("trashcans",<trashcans:energy_trash_can>);
+
+recipes.remove(<trashcans:ultimate_trash_can>);
 
 // LV Machines
 mods.chisel.Carving.addVariation("LV",<gregtech:machine:501>);
