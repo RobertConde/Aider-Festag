@@ -411,20 +411,13 @@ electrolyzer.findRecipe(60,[<minecraft:redstone>*10],null).remove();
 
 //LITHIUM PROCESS
 
-val moltenAluminumRecipe = mods.modularmachinery.RecipeBuilder.newBuilder("moltenaluminum","hallheroult",240,0);
-moltenAluminumRecipe.addFluidInput(<liquid:water>*144);
-moltenAluminumRecipe.addItemInput(<contenttweaker:material_part:11>*1);
-moltenAluminumRecipe.addFluidOutput(<liquid:aluminium>*144);
-moltenAluminumRecipe.addEnergyPerTickInput(8);
-moltenAluminumRecipe.build();
-
 
 //salt water -> lithium brine
 centrifuge.recipeBuilder()
     .fluidInputs([<liquid:salt_water>*2000])
     .fluidOutputs([<liquid:lithiumbrine>*1000])
     .outputs(<gregtech:meta_item_1:2155>*1)
-    .properties("circuit",1)
+    .notConsumable(<gregtech:meta_item_1:32766>.withTag({Configuration: 8}))
     .EUt(32)
     .duration(600)
     .buildAndRegister();
@@ -435,6 +428,7 @@ centrifuge.recipeBuilder()
 val evaporatedLithiumRecipe = mods.modularmachinery.RecipeBuilder.newBuilder("lithiumbrine","solarevaporationplant",1000,0);
 evaporatedLithiumRecipe.addFluidInput(<liquid:lithiumbrine>*2000);
 evaporatedLithiumRecipe.addFluidOutput(<liquid:evaporatedlithiumbrine>*1000);
+evaporatedLithiumRecipe.build();
 
 //centrifuge lithium brine
 

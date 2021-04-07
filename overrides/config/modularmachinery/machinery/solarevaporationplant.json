@@ -1,7 +1,7 @@
 {
     "registryname": "solarevaporationplant",
     "localizedname": "Solar Evaporation Plant",
-    "color" : "453214",
+    "color" : "000000",
     "parts": [
         {
             "x": -1,

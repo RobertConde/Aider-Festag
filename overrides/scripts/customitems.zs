@@ -122,5 +122,5 @@ evaporatedlithiumbrine.register();
 //28: lithium chloride
 
 var lithiumchloride = MaterialSystem.getMaterialBuilder().setName("Lithium Chloride").setColor("192039").build();
-lithiumchloride.register();
+lithiumchloride.registerParts(["dust"] as string[]);
 
