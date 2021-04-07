@@ -59,10 +59,10 @@ TierOneMiner.build();
 
 /* PROCESS: Steel */
 val EZsteel = mods.modularmachinery.RecipeBuilder.newBuilder("ezsteel","t1blastfurnace",80,0);
-EZsteel.addItemInput(<ore:ingotIron>*1);
-EZsteel.addItemInput(<ore:ingotCarbon>*1);
-Ezsteel.addItemOutput(<gregtech:meta_item_1:10184>);
-Ezsteel.build();
+EZsteel.addItemInput(<minecraft:iron_ingot>*1);
+EZsteel.addItemInput(<gregtech:meta_item_1:10012>*1);
+EZsteel.addItemOutput(<gregtech:meta_item_1:10184>);
+EZsteel.build();
 
 /* PROCESS: Carbon */
 val CarbonIngotRecipe = mods.modularmachinery.RecipeBuilder.newBuilder("carbonIngot","basicPyroOven",1200,0);
@@ -312,7 +312,7 @@ electrolyzer.findRecipe(60,[<gregtech:meta_item_1:2102>*7],null).remove();
 chemreactor.recipeBuilder()
     .inputs(<gregtech:meta_item_1:2155>*1)
     .fluidInputs([<liquid:water>*144,<liquid:carbon_dioxide>*144,<liquid:ammonia>*144])
-    .outputs(<contenttweaker:material_part:23>*1)
+    .outputs(<contenttweaker:material_part:27>*1)
     .EUt(16)
     .duration(190)
     .buildAndRegister();
@@ -351,7 +351,7 @@ chemreactor.recipeBuilder()
 
 electrolyzer.recipeBuilder()
     .inputs(<contenttweaker:material_part:17>*1)
-    .outputs(<gregtech:meta_item_1:2063>*1,<gregtech:meta_item_1:2065>*1)
+    .outputs(<gregtech:meta_item_1:2063>*2,<gregtech:meta_item_1:2065>*1)
     .fluidOutputs([<liquid:oxygen>*576])
     .EUt(8)
     .duration(150)
@@ -372,7 +372,7 @@ centrifuge.recipeBuilder()
     .buildAndRegister();
 
 electrolyzer.recipeBuilder()
-    .inputs(<contenttweaker:material_part:23>*1)
+    .inputs(<contenttweaker:material_part:27>*1)
     .outputs(<contenttweaker:material_part:16>*1)
     .fluidOutputs(<liquid:ammoniumchloride>*144)
     .EUt(8)
@@ -402,4 +402,8 @@ blast_furnace.recipeBuilder()
 
 recipes.remove(<gregtech:meta_item_1:2149>);
 furnace.remove(<gregtech:meta_item_1:10039>);
+
+//removing redstone recipe
+
+electrolyzer.findRecipe(60,[<minecraft:redstone>*10],null).remove();
 

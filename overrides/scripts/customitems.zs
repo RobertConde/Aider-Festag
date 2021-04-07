@@ -83,4 +83,31 @@ chromiteReactionProduct.registerParts(["dust"] as string[]);
 
 // 22: Sodium Chromate Reaction Product
 var sodiumChromateReactionProduct = MaterialSystem.getMaterialBuilder().setName("Sodium Chromate Reaction Product").setColor(87421).build();
-sodiumchromateReactionProduct.registerParts(["dust"] as string[]);
+sodiumChromateReactionProduct.registerParts(["dust"] as string[]);
+
+// 23: Molybdenum (VI) Oxide
+
+var molybdenumoxide = MaterialSystem.getMaterialBuilder().setName("Molybdenum(VI) Oxide").setColor(28137).build();
+molybdenumoxide.registerParts(["dust"] as string[]);
+
+//24: ammonium molybdate
+
+var ammoniummolybdate = MaterialSystem.getMaterialBuilder().setName("Ammonium Molybdate").setColor(12312).build();
+ammoniummolybdate.registerParts(["dust"] as string[]);
+
+//25: ammonium dimolybdate
+
+var ammoniumdimolybdate = MaterialSystem.getMaterialBuilder().setName("Ammonium Dimolybdate").setColor(122312).build();
+ammoniumdimolybdate.registerParts(["dust"] as string[]);
+
+//26: Molybdenum trioxide
+
+var molybdenumtrioxide = MaterialSystem.getMaterialBuilder().setName("Molybdenum Trioxide").setColor(4565).build();
+molybdenumtrioxide.registerParts(["dust"] as string[]);
+
+//27: sodium carbonate reaction product
+
+var sodiumcarbonateReactionProduct = MaterialSystem.getMaterialBuilder().setName("Sodium Carbonate Reaction Product").setColor(984222).build();
+sodiumcarbonateReactionProduct.registerParts(["dust"] as string[]);
+
+

@@ -40,3 +40,74 @@ electrolyzer.recipeBuilder()
 //dore bar
 furnace.addRecipe(<contenttweaker:material_part:14>,<contenttweaker:material_part:12>);
 
+//MOLYBDENUM PROCESS
+
+furnace.remove(<gregtech:meta_item_1:10041>);
+recipes.remove(<gregtech:meta_item_1:2041>);
+recipes.remove(<gregtech:meta_item_1:10041>);
+
+fluid_extractor.findRecipe(48,[<gregtech:ore_molybdenum_0>],null).remove();
+macerator.findRecipe(12,[<gregtech:ore_molybdenum_0>],null).remove();
+hammer.findRecipe(6,[<gregtech:ore_molybdenum_0>],null).remove();
+
+// first step molyboxide
+
+blast_furnace.recipeBuilder()
+
+    .inputs(<gregtech:ore_molybdenum_0>*2)
+    .outputs(<contenttweaker:material_part:23>*2)
+    .fluidOutputs([<liquid:sulfur_dioxide>*576])
+    .EUt(99)
+    .duration(80)
+    .buildAndRegister();
+
+// second step ammonia step
+
+chemreactor.recipeBuilder()
+    .inputs(<contenttweaker:material_part:23>*1)
+    .fluidInputs([<liquid:ammonia>*288,<liquid:water>*144])
+    .outputs(<contenttweaker:material_part:24>*1)
+    .EUt(120)
+    .duration(120)
+    .buildAndRegister();
+    
+//third step dimolybdate
+
+chemreactor.recipeBuilder()
+    .inputs(<contenttweaker:material_part:24>*16)
+    .outputs(<contenttweaker:material_part:25>*16)
+    .EUt(120)
+    .duration(1200)
+    .buildAndRegister();
+
+//fourth step molybd trioxide
+
+blast_furnace.recipeBuilder()
+    .inputs(<contenttweaker:material_part:25>*1)
+    .outputs(<contenttweaker:material_part:26>*2)
+    .fluidOutputs([<liquid:ammonia>*288])
+    .EUt(80)
+    .duration(120)
+    .buildAndRegister();
+
+//final step in chemical reactor
+
+chemreactor.recipeBuilder()
+    .inputs(<contenttweaker:material_part:26>*1)
+    .outputs(<gregtech:meta_item_1:10041>*1)
+    .fluidInputs([<liquid:hydrogen>*432])
+    .fluidOutputs([<liquid:water>*432])
+    .EUt(80)
+    .duration(100)
+    .buildAndRegister();
+
+
+
+
+
+
+
+
+
+
+
