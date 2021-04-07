@@ -292,12 +292,13 @@ recipes.addShaped(<gregtech:meta_item_2:32488> * 1, [[<gregtech:meta_item_1:1003
 val TierTwoMinerRecipe = mods.modularmachinery.RecipeBuilder.newBuilder("T2MINE","t2miner",100,0);
 
 TierTwoMinerRecipe.addItemInput(<contenttweaker:material_part:6>*1);
-TierTwoMinerRecipe.addFluidInput(<liquid:sulfuric_acid>*8);
+TierTwoMinerRecipe.addFluidInput(<liquid:sulfuric_acid>*10);
 TierTwoMinerRecipe.addItemOutput(<gregtech:ore_silver_0>*6);
 TierTwoMinerRecipe.addItemOutput(<gregtech:ore_bauxite_0>*6);
 TierTwoMinerRecipe.addItemOutput(<minecraft:gold_ore>*6);
 TierTwoMinerRecipe.addItemOutput(<gregtech:ore_nickel_0>*6);
 TierTwoMinerRecipe.addItemOutput(<gregtech:ore_chromite_0>*6);
+TierTwoMinerRecipe.addItemOutput(<gregtech:ore_pyrolusite_0>*6);
 TierTwoMinerRecipe.build();
 
 //Chromium process
@@ -311,8 +312,7 @@ electrolyzer.findRecipe(60,[<gregtech:meta_item_1:2102>*7],null).remove();
 chemreactor.recipeBuilder()
     .inputs(<gregtech:meta_item_1:2155>*1)
     .fluidInputs([<liquid:water>*144,<liquid:carbon_dioxide>*144,<liquid:ammonia>*144])
-    .outputs(<contenttweaker:material_part:16>*1)
-    .fluidOutputs(<liquid:ammoniumchloride>*144)
+    .outputs(<contenttweaker:material_part:23>*1)
     .EUt(16)
     .duration(190)
     .buildAndRegister();
@@ -371,6 +371,14 @@ centrifuge.recipeBuilder()
     .duration(20)
     .buildAndRegister();
 
+electrolyzer.recipeBuilder()
+    .inputs(<contenttweaker:material_part:23>*1)
+    .outputs(<contenttweaker:material_part:16>*1)
+    .fluidOutputs(<liquid:ammoniumchloride>*144)
+    .EUt(8)
+    .duration(20)
+    .buildAndRegister();
+
 //third processing step.
 
 blast_furnace.recipeBuilder()
@@ -389,4 +397,9 @@ blast_furnace.recipeBuilder()
     .EUt(32)
     .duration(240)
     .buildAndRegister();
+
+//MANGANESE PROCESS
+
+recipes.remove(<gregtech:meta_item_1:2149>);
+furnace.remove(<gregtech:meta_item_1:10039>);
 
