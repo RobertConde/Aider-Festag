@@ -1,0 +1,20 @@
+{
+	x: 3.5d,
+	y: 2.5d,
+	dependencies: [
+		"1d23b728"
+	],
+	tasks: [{
+		uid: "d94dbe9c",
+		type: "item",
+		items: [{
+			id: "forge:bucketfilled",
+			tag: {
+				FluidName: "lithiumbrine",
+				Amount: 1000
+			}
+		}],
+		ignore_damage: true,
+		ignore_nbt: 1b
+	}]
+}

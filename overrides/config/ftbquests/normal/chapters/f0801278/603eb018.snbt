@@ -1,0 +1,18 @@
+{
+	x: 4.5d,
+	y: 2.0d,
+	description: "more steam",
+	text: [
+		"Check JEI on how to build the multiblock."
+	],
+	dependencies: [
+		"15386079"
+	],
+	tasks: [{
+		uid: "9e4c8292",
+		type: "item",
+		items: [{
+			item: "gregtech:machine 1 521"
+		}]
+	}]
+}

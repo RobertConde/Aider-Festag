@@ -1,5 +1,5 @@
 {
-	title: "LV ore processing",
+	title: "pre-LV element processing",
 	icon: "gregtech:ore_lead_0",
 	always_invisible: false,
 	group: -1409034989,

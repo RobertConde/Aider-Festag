@@ -1,7 +1,7 @@
 {
 	title: "Super Primitive Blast Furnace",
-	x: 4.5d,
-	y: -3.5d,
+	x: 5.0d,
+	y: -2.5d,
 	shape: "gear",
 	description: "Your source of Lead and Zinc ingots for now",
 	text: [

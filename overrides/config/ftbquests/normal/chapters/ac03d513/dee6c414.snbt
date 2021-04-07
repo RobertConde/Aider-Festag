@@ -1,0 +1,14 @@
+{
+	x: 0.5d,
+	y: 1.5d,
+	dependencies: [
+		"5bef1f15"
+	],
+	tasks: [{
+		uid: "82cbadb4",
+		type: "item",
+		items: [{
+			item: "minecraft:stone 1 1"
+		}]
+	}]
+}

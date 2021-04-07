@@ -1,0 +1,20 @@
+{
+	x: 10.0d,
+	y: 1.5d,
+	dependencies: [
+		"abf3d122"
+	],
+	tasks: [{
+		uid: "8314895e",
+		type: "item",
+		items: [{
+			id: "forge:bucketfilled",
+			tag: {
+				FluidName: "aluminium",
+				Amount: 1000
+			}
+		}],
+		ignore_damage: true,
+		ignore_nbt: 1b
+	}]
+}

@@ -1,0 +1,7 @@
+{
+	title: "LV element processing",
+	icon: "gregtech:meta_item_1 1 2036",
+	always_invisible: false,
+	group: -260042120,
+	default_quest_shape: ""
+}

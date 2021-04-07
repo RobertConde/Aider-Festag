@@ -1,0 +1,15 @@
+{
+	x: 0.0d,
+	y: 1.5d,
+	description: "It only gets longer from here...",
+	text: [
+		"Yes, it's your first long production chain. Get used to it and adapt to large resource demands, you might need alot in the future..."
+	],
+	tasks: [{
+		uid: "4accdea5",
+		type: "item",
+		items: [{
+			item: "gregtech:ore_bauxite_0"
+		}]
+	}]
+}

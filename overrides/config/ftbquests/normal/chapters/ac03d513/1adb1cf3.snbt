@@ -1,0 +1,42 @@
+{
+	x: 15.0d,
+	y: -3.0d,
+	shape: "gear",
+	description: "chisel them!",
+	text: [
+		""
+	],
+	dependencies: [
+		"0cbde54d",
+		"6a9bd619",
+		"24c29890",
+		"5db74142",
+		"b25838b0",
+		"d23e4184",
+		"89d388fd",
+		"9fef4dd0"
+	],
+	size: 2.0d,
+	tasks: [{
+		uid: "650d9abc",
+		type: "item",
+		items: [{
+			item: "gregtech:machine 1 501"
+		}]
+	}],
+	rewards: [{
+		uid: "fdf5db54",
+		type: "item",
+		item: {
+			id: "chisel:chisel_diamond",
+			tag: {
+				chiseldata: {}
+			}
+		}
+	},
+	{
+		uid: "f8141942",
+		type: "item",
+		item: "gregtech:machine 1 2"
+	}]
+}

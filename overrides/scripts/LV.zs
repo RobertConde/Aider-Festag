@@ -27,7 +27,7 @@ mods.nuclearcraft.manufactory.addRecipe([<ore:cobblestone>, <minecraft:sand>]);
 // LV MAchine Hull
 recipes.remove(<gregtech:machine:501>);
 assembler.findRecipe(16, [<gregtech:cable:5071>*2,<gregtech:machine_casing:1>],null).remove();
-recipes.addShaped(<gregtech:machine:501> * 1, [[<gregtech:meta_item_1:10018>, <gregtech:meta_item_1:10035>, <gregtech:meta_item_1:10012>], [<gregtech:meta_item_1:10197>, null, <gregtech:meta_item_1:10079>],[<modularmachinery:itemmodularium>, <gregtech:meta_item_1:2065>, <gregtech:meta_item_1:10071>]]);
+recipes.addShaped(<gregtech:machine:501> * 1, [[<gregtech:meta_item_1:10018>, <gregtech:meta_item_1:10035>, <gregtech:meta_item_1:10012>], [<gregtech:meta_item_1:10197>, <gregtech:meta_item_1:10061>, <gregtech:meta_item_1:10079>],[<modularmachinery:itemmodularium>, <gregtech:meta_item_1:2065>, <gregtech:meta_item_1:10071>]]);
 
 // Modularium Ingot
 recipes.remove(<modularmachinery:itemmodularium>);
@@ -448,6 +448,10 @@ electrolyzer.recipeBuilder()
     .EUt(16)
     .duration(100)
     .buildAndRegister();
+
+//MAGNESIUM LINE
+
+
 
 
 

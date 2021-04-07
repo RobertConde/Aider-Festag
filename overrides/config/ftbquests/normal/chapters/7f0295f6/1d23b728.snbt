@@ -1,0 +1,17 @@
+{
+	x: 0.0d,
+	y: 2.5d,
+	tasks: [{
+		uid: "2c8dfa78",
+		type: "item",
+		items: [{
+			id: "forge:bucketfilled",
+			tag: {
+				FluidName: "salt_water",
+				Amount: 1000
+			}
+		}],
+		ignore_damage: true,
+		ignore_nbt: 1b
+	}]
+}

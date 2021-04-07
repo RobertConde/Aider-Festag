@@ -1,6 +1,6 @@
 {
-	title: "pre-LV",
-	icon: "minecraft:brick_block",
+	title: "LV",
+	icon: "gregtech:machine 1 501",
 	always_invisible: false,
 	group: 0,
 	default_quest_shape: ""

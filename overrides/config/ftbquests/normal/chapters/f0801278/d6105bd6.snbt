@@ -1,0 +1,50 @@
+{
+	title: "Tier Two Miner",
+	x: 13.0d,
+	y: 0.5d,
+	description: "It's Grind time",
+	text: [
+		"There won't be too many of these don't worry"
+	],
+	dependencies: [
+		"17aaf66c",
+		"7aacbe9f"
+	],
+	tasks: [{
+		uid: "350ac17c",
+		type: "item",
+		items: [{
+			item: "gregtech:metal_casing 1 1"
+		}],
+		count: 32L
+	},
+	{
+		uid: "4c1856de",
+		type: "item",
+		items: [{
+			item: "gregtech:compressed_4"
+		}],
+		count: 8L
+	},
+	{
+		uid: "53b1ddb6",
+		type: "item",
+		items: [{
+			item: "minecraft:glass"
+		}],
+		count: 24L
+	},
+	{
+		uid: "ebd711d4",
+		type: "item",
+		items: [{
+			item: "gregtech:metal_casing"
+		}],
+		count: 44L
+	}],
+	rewards: [{
+		uid: "287ecd84",
+		type: "item",
+		item: "nuclearcraft:cobblestone_generator"
+	}]
+}

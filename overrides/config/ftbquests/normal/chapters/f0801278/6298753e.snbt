@@ -1,0 +1,27 @@
+{
+	x: 15.0d,
+	y: 0.5d,
+	dependencies: [
+		"d6105bd6"
+	],
+	tasks: [{
+		uid: "0412e9f3",
+		type: "item",
+		items: [{
+			item: "contenttweaker:material_part 1 6"
+		}]
+	},
+	{
+		uid: "9b08df98",
+		type: "item",
+		items: [{
+			id: "forge:bucketfilled",
+			tag: {
+				FluidName: "sulfuric_acid",
+				Amount: 1000
+			}
+		}],
+		ignore_damage: true,
+		ignore_nbt: 1b
+	}]
+}

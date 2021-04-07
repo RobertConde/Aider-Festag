@@ -1,14 +1,14 @@
 {
-	x: 6.0d,
+	x: 0.5d,
 	y: -0.5d,
 	dependencies: [
-		"75f6be28"
+		"778d97b5"
 	],
 	tasks: [{
-		uid: "2416651c",
+		uid: "da429a46",
 		type: "item",
 		items: [{
-			item: "gregtech:meta_item_1 1 10012"
+			item: "minecraft:sand"
 		}]
 	}]
 }

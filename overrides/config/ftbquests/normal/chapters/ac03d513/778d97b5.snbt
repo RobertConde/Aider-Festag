@@ -19,5 +19,22 @@
 		type: "item",
 		item: "modularmachinery:itemmodularium",
 		count: 64
+	},
+	{
+		uid: "f2f68d39",
+		type: "item",
+		item: "minecraft:dirt",
+		count: 16
+	},
+	{
+		uid: "01ca99aa",
+		type: "item",
+		item: "minecraft:sapling",
+		count: 16
+	},
+	{
+		uid: "9fd84fdc",
+		type: "item",
+		item: "minecraft:bucket"
 	}]
 }

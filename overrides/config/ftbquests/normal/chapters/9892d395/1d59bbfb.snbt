@@ -1,0 +1,13 @@
+{
+	title: "Some information",
+	x: -4.5d,
+	y: 1.0d,
+	text: [
+		"The ore processing questlines will ONLY focus one the refining of elements with multiple steps. ",
+		"Simple smelting is easy enough to understand."
+	],
+	tasks: [{
+		uid: "dd09dbd5",
+		type: "checkmark"
+	}]
+}

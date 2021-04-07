@@ -1,0 +1,14 @@
+{
+	x: 0.5d,
+	y: 0.5d,
+	dependencies: [
+		"31de148e"
+	],
+	tasks: [{
+		uid: "461a679a",
+		type: "item",
+		items: [{
+			item: "minecraft:stonebrick"
+		}]
+	}]
+}

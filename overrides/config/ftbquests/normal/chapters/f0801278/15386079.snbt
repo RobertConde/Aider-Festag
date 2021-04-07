@@ -1,0 +1,28 @@
+{
+	x: 6.5d,
+	y: 0.5d,
+	text: [
+		"machines explode if:",
+		"",
+		"-cables are supplied with too much voltage",
+		"-machines use too many amps of power at a time.",
+		"",
+		"Check cable tooltips for respective cables."
+	],
+	dependencies: [
+		"1adb1cf3"
+	],
+	tasks: [{
+		uid: "a8a1655c",
+		type: "item",
+		items: [{
+			item: "gregtech:machine 1 485"
+		}]
+	}],
+	rewards: [{
+		uid: "8fcdb965",
+		type: "item",
+		item: "gregtech:cable 1 7071",
+		count: 8
+	}]
+}

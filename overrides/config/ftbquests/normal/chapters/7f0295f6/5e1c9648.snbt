@@ -1,0 +1,19 @@
+{
+	x: 12.0d,
+	y: 0.5d,
+	text: [
+		"Needs Carbon monoxide.",
+		"",
+		"For now, use charcoal dust, and oxygen."
+	],
+	dependencies: [
+		"246e3156"
+	],
+	tasks: [{
+		uid: "cf65bfd1",
+		type: "item",
+		items: [{
+			item: "minecraft:iron_ingot"
+		}]
+	}]
+}

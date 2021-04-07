@@ -1,0 +1,25 @@
+{
+	title: "Wrench",
+	x: 6.5d,
+	y: -1.0d,
+	text: [
+		"Standard gregtech tool to configure machines."
+	],
+	dependencies: [
+		"1adb1cf3"
+	],
+	tasks: [{
+		uid: "7fb5f05c",
+		type: "item",
+		items: [{
+			id: "gregtech:meta_tool",
+			tag: {
+				GT.ToolStats: {
+					Material: "darmstadtium"
+				}
+			},
+			Damage: 8s
+		}],
+		ignore_nbt: 1b
+	}]
+}

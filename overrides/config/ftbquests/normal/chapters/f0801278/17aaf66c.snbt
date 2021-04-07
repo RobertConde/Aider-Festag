@@ -1,0 +1,27 @@
+{
+	title: "Useful materials",
+	x: 10.0d,
+	y: 1.5d,
+	text: [
+		""
+	],
+	dependencies: [
+		"15386079"
+	],
+	tasks: [{
+		uid: "b4df59f5",
+		type: "item",
+		items: [{
+			item: "minecraft:brick_block"
+		}],
+		count: 15L
+	},
+	{
+		uid: "6546c6ce",
+		type: "item",
+		items: [{
+			item: "gregtech:meta_item_1 1 12095"
+		}],
+		count: 90L
+	}]
+}
