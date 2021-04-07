@@ -110,4 +110,17 @@ molybdenumtrioxide.registerParts(["dust"] as string[]);
 var sodiumcarbonateReactionProduct = MaterialSystem.getMaterialBuilder().setName("Sodium Carbonate Reaction Product").setColor(984222).build();
 sodiumcarbonateReactionProduct.registerParts(["dust"] as string[]);
 
+// FLUID: Lithium Brine
+var lithiumbrine = VanillaFactory.createFluid("lithiumbrine", Color.fromHex("809619"));    // NOTE: Unlocalized names should be ENTIRELY lowercase.
+lithiumbrine.register();
+
+//FLUID: evaporated lithium brine
+
+var evaporatedlithiumbrine = VanillaFactory.createFluid("evaporatedlithiumbrine", Color.fromHex("77777"));
+evaporatedlithiumbrine.register();
+
+//28: lithium chloride
+
+var lithiumchloride = MaterialSystem.getMaterialBuilder().setName("Lithium Chloride").setColor("192039").build();
+lithiumchloride.register();
 

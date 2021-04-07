@@ -101,6 +101,9 @@ chemreactor.recipeBuilder()
     .duration(100)
     .buildAndRegister();
 
+//removing clay recipe
+
+electrolyzer.findRecipe(60,[<gregtech:meta_item_1:2105>*13],null).remove();
 
 
 

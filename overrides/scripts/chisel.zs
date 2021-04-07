@@ -61,3 +61,5 @@ mods.chisel.Carving.addVariation("LV",<gregtech:machine:360>);
 mods.chisel.Carving.addVariation("LV",<gregtech:machine:370>);
 mods.chisel.Carving.addVariation("LV",<gregtech:machine:390>);
 mods.chisel.Carving.addVariation("LV",<gregtech:machine:400>);
+
+string temp = "<gregtech:machine:" + n
