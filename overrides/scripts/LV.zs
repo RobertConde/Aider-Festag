@@ -44,7 +44,7 @@ mixer.recipeBuilder()
 mods.nuclearcraft.manufactory.addRecipe([<minecraft:stonebrick>,<minecraft:stone:1>]);
 
 // T1 Miner
-val TierOneMiner = mods.modularmachinery.RecipeBuilder.newBuilder("T1MINE","t1miner",100,0);
+val TierOneMiner = mods.modularmachinery.RecipeBuilder.newBuilder("T1MINE","t1miner",100);
 
 TierOneMiner.addItemInput(<minecraft:cobblestone>*4);
 TierOneMiner.addItemOutput(<gregtech:ore_lead_0>*1);
@@ -58,27 +58,27 @@ TierOneMiner.addItemOutput(<gregtech:meta_item_1:32627>*1);
 TierOneMiner.build();
 
 /* PROCESS: Steel */
-val EZsteel = mods.modularmachinery.RecipeBuilder.newBuilder("ezsteel","t1blastfurnace",80,0);
+val EZsteel = mods.modularmachinery.RecipeBuilder.newBuilder("ezsteel","t1blastfurnace",80);
 EZsteel.addItemInput(<minecraft:iron_ingot>*1);
 EZsteel.addItemInput(<gregtech:meta_item_1:10012>*1);
 EZsteel.addItemOutput(<gregtech:meta_item_1:10184>);
 EZsteel.build();
 
 /* PROCESS: Carbon */
-val CarbonIngotRecipe = mods.modularmachinery.RecipeBuilder.newBuilder("carbonIngot","basicPyroOven",1200,0);
+val CarbonIngotRecipe = mods.modularmachinery.RecipeBuilder.newBuilder("carbonIngot","basicPyroOven",1200);
 CarbonIngotRecipe.addItemInput(<minecraft:coal:1> * 16);
 CarbonIngotRecipe.addItemOutput(<gregtech:meta_item_1:10012> * 16);
 CarbonIngotRecipe.build();
 
 /* PROCESS: Lead*/
-val LeadOxideRecipe = mods.modularmachinery.RecipeBuilder.newBuilder("leadOxide","t1blastfurnace",80,0);
+val LeadOxideRecipe = mods.modularmachinery.RecipeBuilder.newBuilder("leadOxide","t1blastfurnace",80);
 LeadOxideRecipe.addItemInput(<gregtech:ore_lead_0> * 2);
 LeadOxideRecipe.addItemInput(<minecraft:coal:1> * 2);
 LeadOxideRecipe.addItemOutput(<contenttweaker:material_part:1>*2);
 LeadOxideRecipe.addFluidOutput(<liquid:sulfur_dioxide>*288);
 LeadOxideRecipe.build();
 
-val LeadIngotRecipe = mods.modularmachinery.RecipeBuilder.newBuilder("leadingot","t1blastfurnace",80,0);
+val LeadIngotRecipe = mods.modularmachinery.RecipeBuilder.newBuilder("leadingot","t1blastfurnace",80);
 LeadIngotRecipe.addItemInput(<contenttweaker:material_part:1>*2);
 LeadIngotRecipe.addItemInput(<gregtech:meta_item_1:10012>*1);
 LeadIngotRecipe.addFluidOutput(<liquid:carbon_dioxide>*144);
@@ -93,14 +93,14 @@ macerator.findRecipe(12,[<gregtech:ore_lead_0>],null).remove();
 hammer.findRecipe(6,[<gregtech:ore_lead_0>],null).remove();
 
 /* PROCESS: Zinc */
-val ZincOxideRecipe = mods.modularmachinery.RecipeBuilder.newBuilder("zincOxide","t1blastfurnace",80,0);
+val ZincOxideRecipe = mods.modularmachinery.RecipeBuilder.newBuilder("zincOxide","t1blastfurnace",80);
 ZincOxideRecipe.addItemInput(<gregtech:ore_zinc_0>*2);
 ZincOxideRecipe.addItemInput(<minecraft:coal:1> * 2);
 ZincOxideRecipe.addItemOutput(<contenttweaker:material_part:3>*2);
 ZincOxideRecipe.addFluidOutput(<liquid:sulfur_dioxide>*288);
 ZincOxideRecipe.build();
 
-val ZincIngotRecipe = mods.modularmachinery.RecipeBuilder.newBuilder("zincingot","t1blastfurnace",80,0);
+val ZincIngotRecipe = mods.modularmachinery.RecipeBuilder.newBuilder("zincingot","t1blastfurnace",80);
 ZincIngotRecipe.addItemInput(<contenttweaker:material_part:3>*2);
 ZincIngotRecipe.addItemInput(<gregtech:meta_item_1:10012>*1);
 ZincIngotRecipe.addFluidOutput(<liquid:carbon_dioxide>*144);
@@ -122,7 +122,7 @@ hammer.findRecipe(6,[<gregtech:ore_copper_0>],null).remove();
 /* PROCESS: Silicon */
 mods.nuclearcraft.manufactory.removeRecipeWithOutput([<gregtech:meta_item_1:10061>]);
 
-val siliconRecipe = mods.modularmachinery.RecipeBuilder.newBuilder("silicon","t1blastfurnace",240,0);
+val siliconRecipe = mods.modularmachinery.RecipeBuilder.newBuilder("silicon","t1blastfurnace",240);
 siliconRecipe.addItemInput(<minecraft:sand>*8);
 siliconRecipe.addItemInput(<gregtech:meta_item_1:10012> * 8);
 siliconRecipe.addItemOutput(<gregtech:meta_item_1:10061>*8);
@@ -137,7 +137,7 @@ hammer.findRecipe(6,[<gregtech:ore_magnetite_0>],null).remove();
 furnace.addRecipe(<gregtech:meta_item_1:10197>,<gregtech:ore_magnetite_0>);
 
 /* PROCESS: Iron */
-val IronIngotRecipe = mods.modularmachinery.RecipeBuilder.newBuilder("ironingot","t1blastfurnace",240,0);
+val IronIngotRecipe = mods.modularmachinery.RecipeBuilder.newBuilder("ironingot","t1blastfurnace",240);
 IronIngotRecipe.addItemInput(<gregtech:ore_magnetite_0>);
 IronIngotRecipe.addFluidInput(<liquid:carbon_monoxide>*576);
 IronIngotRecipe.addItemOutput(<minecraft:iron_ingot>*3);
@@ -188,7 +188,7 @@ mods.nuclearcraft.crystallizer.addRecipe([<liquid:aluminumhydroxidesolution>*144
 
 //processing sodiumionsolution
 
-val sodiumIonRecipe = mods.modularmachinery.RecipeBuilder.newBuilder("sodiumdust","ionizer",20,0);
+val sodiumIonRecipe = mods.modularmachinery.RecipeBuilder.newBuilder("sodiumdust","ionizer",20);
 sodiumIonRecipe.addFluidInput(<liquid:sodiumionsolution>*144);
 sodiumIonRecipe.addItemOutput(<gregtech:meta_item_1:2063>*1);
 sodiumIonRecipe.build();
@@ -199,7 +199,7 @@ furnace.addRecipe(<contenttweaker:material_part:11>,<contenttweaker:material_par
 
 //hall-hreoult process
 
-val moltenAluminumRecipe = mods.modularmachinery.RecipeBuilder.newBuilder("moltenaluminum","hallheroult",240,0);
+val moltenAluminumRecipe = mods.modularmachinery.RecipeBuilder.newBuilder("moltenaluminum","hallheroult",240);
 moltenAluminumRecipe.addFluidInput(<liquid:water>*144);
 moltenAluminumRecipe.addItemInput(<contenttweaker:material_part:11>*1);
 moltenAluminumRecipe.addFluidOutput(<liquid:aluminium>*144);
@@ -293,7 +293,7 @@ recipes.remove(<thermalfoundation:material:1>);
 
 //LV MINER
 
-val TierTwoMinerRecipe = mods.modularmachinery.RecipeBuilder.newBuilder("T2MINE","t2miner",100,0);
+val TierTwoMinerRecipe = mods.modularmachinery.RecipeBuilder.newBuilder("T2MINE","t2miner",100);
 
 TierTwoMinerRecipe.addItemInput(<contenttweaker:material_part:6>*1);
 TierTwoMinerRecipe.addFluidInput(<liquid:sulfuric_acid>*10);
@@ -429,7 +429,7 @@ centrifuge.recipeBuilder()
 
 
 //evaporated lithium brine
-val evaporatedLithiumRecipe = mods.modularmachinery.RecipeBuilder.newBuilder("lithiumbrine","solarevaporationplant",1000,0);
+val evaporatedLithiumRecipe = mods.modularmachinery.RecipeBuilder.newBuilder("lithiumbrine","solarevaporationplant",1000);
 evaporatedLithiumRecipe.addFluidInput(<liquid:lithiumbrine>*2000);
 evaporatedLithiumRecipe.addFluidOutput(<liquid:evaporatedlithiumbrine>*1000);
 evaporatedLithiumRecipe.build();
@@ -453,13 +453,81 @@ electrolyzer.recipeBuilder()
     .duration(100)
     .buildAndRegister();
 
+// Nickel Electrodes
+mods.modularmachinery.RecipeBuilder.newBuilder("nickelelectrode_50_0", "electroplater", 1000)
+    .addItemInput(<gregtech:meta_item_1:14062>) // Silver Rod
+    .addItemInput(<gregtech:meta_item_1:3044>)
+    .addFluidInput(<liquid:water>*1000);
+    .addItemOutput(<contenttweaker:material_part:29>)
+    .build();
 
+mods.modularmachinery.RecipeBuilder.newBuilder("nickelelectrode_75_0", "electroplater", 1000)
+    .addItemInput(<contenttweaker:material_part:29>)
+    .addItemInput(<gregtech:meta_item_1:3044>)
+    .addFluidInput(<liquid:water>*1000);
+    .addItemOutput(<contenttweaker:material_part:30>)
+    .build();
 
+mods.modularmachinery.RecipeBuilder.newBuilder("nickelelectrode_87_5", "electroplater", 1000)
+    .addItemInput(<contenttweaker:material_part:30>)
+    .addItemInput(<gregtech:meta_item_1:3044>)
+    .addFluidInput(<liquid:water>*1000);
+    .addItemOutput(<contenttweaker:material_part:31>)
+    .build();
 
+mods.modularmachinery.RecipeBuilder.newBuilder("nickelelectrode_93_4", "electroplater", 1000)
+    .addItemInput(<contenttweaker:material_part:31>)
+    .addItemInput(<gregtech:meta_item_1:3044>)
+    .addFluidInput(<liquid:water>*1000);
+    .addItemOutput(<contenttweaker:material_part:32>)
+    .build();
 
+mods.modularmachinery.RecipeBuilder.newBuilder("nickelelectrode_96_9", "electroplater", 1000)
+    .addItemInput(<contenttweaker:material_part:32>)
+    .addItemInput(<gregtech:meta_item_1:3044>)
+    .addFluidInput(<liquid:water>*1000);
+    .addItemOutput(<contenttweaker:material_part:33>)
+    .build();
 
+mods.modularmachinery.RecipeBuilder.newBuilder("nickelelectrode_98_4", "electroplater", 1000)
+    .addItemInput(<contenttweaker:material_part:33>)
+    .addItemInput(<gregtech:meta_item_1:3044>)
+    .addFluidInput(<liquid:water>*1000);
+    .addItemOutput(<contenttweaker:material_part:34>)
+    .build();
 
+mods.modularmachinery.RecipeBuilder.newBuilder("nickelelectrode_99_2", "electroplater", 1000)
+    .addItemInput(<contenttweaker:material_part:34>)
+    .addItemInput(<gregtech:meta_item_1:3044>)
+    .addFluidInput(<liquid:water>*1000);
+    .addItemOutput(<contenttweaker:material_part:35>)
+    .build();
 
+mods.modularmachinery.RecipeBuilder.newBuilder("nickelelectrode_99_6", "electroplater", 1000)
+    .addItemInput(<contenttweaker:material_part:35>)
+    .addItemInput(<gregtech:meta_item_1:3044>)
+    .addFluidInput(<liquid:water>*1000);
+    .addItemOutput(<contenttweaker:material_part:36>)
+    .build();
 
+mods.modularmachinery.RecipeBuilder.newBuilder("nickelelectrode_99_8", "electroplater", 1000)
+    .addItemInput(<contenttweaker:material_part:36>)
+    .addItemInput(<gregtech:meta_item_1:3044>)
+    .addFluidInput(<liquid:water>*1000);
+    .addItemOutput(<contenttweaker:material_part:37>)
+    .build();
 
+mods.modularmachinery.RecipeBuilder.newBuilder("nickelelectrode_99_9", "electroplater", 1000)
+    .addItemInput(<contenttweaker:material_part:37>)
+    .addItemInput(<gregtech:meta_item_1:3044>)
+    .addFluidInput(<liquid:water>*1000);
+    .addItemOutput(<contenttweaker:material_part:38>)
+    .build();
 
+mods.modularmachinery.RecipeBuilder.newBuilder("nickelelectrode_pure", "electroplater", 1000)
+    .addItemInput(<contenttweaker:material_part:38>)
+    .addItemInput(<gregtech:meta_item_1:3044>)
+    .addFluidInput(<liquid:water>*1000);
+    .addItemOutput(<contenttweaker:material_part:39>)
+    .build();
+ 
