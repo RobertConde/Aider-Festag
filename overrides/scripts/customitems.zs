@@ -85,42 +85,70 @@ chromiteReactionProduct.registerParts(["dust"] as string[]);
 var sodiumChromateReactionProduct = MaterialSystem.getMaterialBuilder().setName("Sodium Chromate Reaction Product").setColor(87421).build();
 sodiumChromateReactionProduct.registerParts(["dust"] as string[]);
 
-// 23: Molybdenum (VI) Oxide
-
+// 23: Molybdenum(VI) Oxide
 var molybdenumoxide = MaterialSystem.getMaterialBuilder().setName("Molybdenum(VI) Oxide").setColor(28137).build();
 molybdenumoxide.registerParts(["dust"] as string[]);
 
-//24: ammonium molybdate
-
+//24: Ammonium Molybdate
 var ammoniummolybdate = MaterialSystem.getMaterialBuilder().setName("Ammonium Molybdate").setColor(12312).build();
 ammoniummolybdate.registerParts(["dust"] as string[]);
 
 //25: ammonium dimolybdate
-
 var ammoniumdimolybdate = MaterialSystem.getMaterialBuilder().setName("Ammonium Dimolybdate").setColor(122312).build();
 ammoniumdimolybdate.registerParts(["dust"] as string[]);
 
 //26: Molybdenum trioxide
-
 var molybdenumtrioxide = MaterialSystem.getMaterialBuilder().setName("Molybdenum Trioxide").setColor(4565).build();
 molybdenumtrioxide.registerParts(["dust"] as string[]);
 
 //27: sodium carbonate reaction product
-
 var sodiumcarbonateReactionProduct = MaterialSystem.getMaterialBuilder().setName("Sodium Carbonate Reaction Product").setColor(984222).build();
 sodiumcarbonateReactionProduct.registerParts(["dust"] as string[]);
 
-// FLUID: Lithium Brine
+//FLUID: Lithium Brine
 var lithiumbrine = VanillaFactory.createFluid("lithiumbrine", Color.fromHex("809619"));    // NOTE: Unlocalized names should be ENTIRELY lowercase.
 lithiumbrine.register();
 
-//FLUID: evaporated lithium brine
-
+//FLUID: Evaporated Lithium Brine
 var evaporatedlithiumbrine = VanillaFactory.createFluid("evaporatedlithiumbrine", Color.fromHex("77777"));
 evaporatedlithiumbrine.register();
 
-//28: lithium chloride
-
+//28: Lithium Chloride
 var lithiumchloride = MaterialSystem.getMaterialBuilder().setName("Lithium Chloride").setColor("192039").build();
 lithiumchloride.registerParts(["dust"] as string[]);
 
+// Nickel Electrodes
+var nickelElectrode;
+
+nickelElectrode = MaterialSystem.getMaterialBuilder().setName("Nickel Electrode [50.0%]").setColor("727472").build();
+nickelElectrode.registerParts(["rod"] as string[]);
+
+nickelElectrode = MaterialSystem.getMaterialBuilder().setName("Nickel Electrode [75.0%]").setColor("727472").build();
+nickelElectrode.registerParts(["rod"] as string[]);
+
+nickelElectrode = MaterialSystem.getMaterialBuilder().setName("Nickel Electrode [87.5%]").setColor("727472").build();
+nickelElectrode.registerParts(["rod"] as string[]);
+
+nickelElectrode = MaterialSystem.getMaterialBuilder().setName("Nickel Electrode [93.4%]").setColor("727472").build();
+nickelElectrode.registerParts(["rod"] as string[]);
+
+nickelElectrode = MaterialSystem.getMaterialBuilder().setName("Nickel Electrode [96.9%]").setColor("727472").build();
+nickelElectrode.registerParts(["rod"] as string[]);
+
+nickelElectrode = MaterialSystem.getMaterialBuilder().setName("Nickel Electrode [98.4%]").setColor("727472").build();
+nickelElectrode.registerParts(["rod"] as string[]);
+
+nickelElectrode = MaterialSystem.getMaterialBuilder().setName("Nickel Electrode [99.2%]").setColor("727472").build();
+nickelElectrode.registerParts(["rod"] as string[]);
+
+nickelElectrode = MaterialSystem.getMaterialBuilder().setName("Nickel Electrode [99.6%]").setColor("727472").build();
+nickelElectrode.registerParts(["rod"] as string[]);
+
+nickelElectrode = MaterialSystem.getMaterialBuilder().setName("Nickel Electrode [99.8%]").setColor("727472").build();
+nickelElectrode.registerParts(["rod"] as string[]);
+
+nickelElectrode = MaterialSystem.getMaterialBuilder().setName("Nickel Electrode [99.9%]").setColor("727472").build();
+nickelElectrode.registerParts(["rod"] as string[]);
+
+nickelElectrode = MaterialSystem.getMaterialBuilder().setName("Nickel Electrode [Pure]").setColor("727472").build();
+nickelElectrode.registerParts(["rod"] as string[]);
