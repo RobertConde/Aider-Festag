@@ -7,7 +7,7 @@
 		"",
 		"Don't freak out, higher tier machines have lower processing time. ",
 		"",
-		"Also, don't rush too much, the machine hulls get increasingly expensive. Large production lines are needed."
+		"Also, don't rush too much, the machine hulls and circuits get increasingly expensive. Large production lines are needed."
 	],
 	dependencies: [
 		"6298753e"
@@ -16,5 +16,11 @@
 		uid: "e5cf5510",
 		type: "checkmark",
 		title: "start of LV elements"
+	}],
+	rewards: [{
+		uid: "1dc4efc7",
+		type: "item",
+		item: "gregtech:metal_casing",
+		count: 4
 	}]
 }

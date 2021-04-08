@@ -1,0 +1,17 @@
+{
+	x: 20.5d,
+	y: 5.5d,
+	text: [
+		"Very important material. You will need alot of this."
+	],
+	dependencies: [
+		"362786ad"
+	],
+	tasks: [{
+		uid: "8cc46fbf",
+		type: "item",
+		items: [{
+			item: "gregtech:meta_item_1 1 10184"
+		}]
+	}]
+}

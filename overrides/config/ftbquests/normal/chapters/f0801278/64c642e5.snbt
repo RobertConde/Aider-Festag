@@ -1,0 +1,16 @@
+{
+	x: 27.0d,
+	y: 3.5d,
+	dependencies: [
+		"362786ad",
+		"7deb79c0"
+	],
+	tasks: [{
+		uid: "7c775360",
+		type: "item",
+		items: [{
+			item: "gregtech:metal_casing 1 2"
+		}],
+		count: 13L
+	}]
+}

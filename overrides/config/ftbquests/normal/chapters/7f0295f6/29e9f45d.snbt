@@ -1,0 +1,18 @@
+{
+	x: 12.0d,
+	y: 3.5d,
+	shape: "octagon",
+	text: [
+		"You aren't done with gold just yet..."
+	],
+	dependencies: [
+		"2317b09d"
+	],
+	tasks: [{
+		uid: "1df3f4d0",
+		type: "item",
+		items: [{
+			item: "contenttweaker:material_part 1 14"
+		}]
+	}]
+}

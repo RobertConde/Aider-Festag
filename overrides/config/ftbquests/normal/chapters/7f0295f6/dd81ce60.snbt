@@ -1,0 +1,11 @@
+{
+	x: 0.0d,
+	y: 3.5d,
+	tasks: [{
+		uid: "59687a85",
+		type: "item",
+		items: [{
+			item: "minecraft:gold_ore"
+		}]
+	}]
+}

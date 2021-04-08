@@ -1,0 +1,18 @@
+{
+	x: 9.5d,
+	y: 4.0d,
+	description: "LV circuit",
+	text: [
+		"This recipe makes no sense, but go with it. It's much simpler than normal."
+	],
+	dependencies: [
+		"15386079"
+	],
+	tasks: [{
+		uid: "d28a5086",
+		type: "item",
+		items: [{
+			item: "gregtech:meta_item_2 1 32487"
+		}]
+	}]
+}

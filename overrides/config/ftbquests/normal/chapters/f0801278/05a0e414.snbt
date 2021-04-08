@@ -1,0 +1,20 @@
+{
+	x: 19.5d,
+	y: 7.5d,
+	description: "Build the Hall-Heroult Process Multiblock",
+	text: [
+		"Aluminium finally!",
+		"",
+		"Typically the MV material, however you're gonna need more than that to make an MV machine casing in this modpack..."
+	],
+	dependencies: [
+		"623d4beb"
+	],
+	tasks: [{
+		uid: "d0eb6337",
+		type: "item",
+		items: [{
+			item: "gregtech:meta_item_1 1 10001"
+		}]
+	}]
+}

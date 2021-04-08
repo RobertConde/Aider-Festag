@@ -1,0 +1,17 @@
+{
+	x: 6.5d,
+	y: -3.5d,
+	text: [
+		"Combine with sulfur in a chemical reactor"
+	],
+	dependencies: [
+		"907ed9c2"
+	],
+	tasks: [{
+		uid: "c94fa402",
+		type: "item",
+		items: [{
+			item: "gregtech:meta_item_1 1 10152"
+		}]
+	}]
+}

@@ -1,0 +1,18 @@
+{
+	x: 21.0d,
+	y: 9.5d,
+	description: "Build the Solar Evaporation Plant",
+	text: [
+		""
+	],
+	dependencies: [
+		"623d4beb"
+	],
+	tasks: [{
+		uid: "cc665489",
+		type: "item",
+		items: [{
+			item: "gregtech:meta_item_1 1 2036"
+		}]
+	}]
+}

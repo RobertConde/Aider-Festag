@@ -1,0 +1,19 @@
+{
+	x: 18.0d,
+	y: 3.5d,
+	text: [
+		"Check LV element processing for the nickel processing line.",
+		"",
+		"Your first long refining process, nickel will be used to make the blast furnace, an extremely useful multiblock machine."
+	],
+	dependencies: [
+		"fd6033c6"
+	],
+	tasks: [{
+		uid: "f4ac319a",
+		type: "item",
+		items: [{
+			item: "minecraft:iron_ingot"
+		}]
+	}]
+}

@@ -1,0 +1,20 @@
+{
+	x: 25.0d,
+	y: -2.0d,
+	description: "Build the Electroplater",
+	text: [
+		"Check LV element processing for the nickel processing line.",
+		"",
+		"Your first long refining process, nickel will be used to make the blast furnace, an extremely useful multiblock machine."
+	],
+	dependencies: [
+		"7c7e4b5c"
+	],
+	tasks: [{
+		uid: "0bdbdfda",
+		type: "item",
+		items: [{
+			item: "gregtech:meta_item_1 1 10044"
+		}]
+	}]
+}

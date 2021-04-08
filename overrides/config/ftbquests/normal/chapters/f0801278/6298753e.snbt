@@ -1,6 +1,11 @@
 {
 	x: 15.0d,
 	y: 0.5d,
+	text: [
+		"You need sulfuric acid for the mining operation.",
+		"",
+		"Sulfuric acid can be made in a variety of ways, check JEI for your favorite one."
+	],
 	dependencies: [
 		"d6105bd6"
 	],
@@ -10,18 +15,5 @@
 		items: [{
 			item: "contenttweaker:material_part 1 6"
 		}]
-	},
-	{
-		uid: "9b08df98",
-		type: "item",
-		items: [{
-			id: "forge:bucketfilled",
-			tag: {
-				FluidName: "sulfuric_acid",
-				Amount: 1000
-			}
-		}],
-		ignore_damage: true,
-		ignore_nbt: 1b
 	}]
 }

@@ -1,0 +1,17 @@
+{
+	x: 20.5d,
+	y: -2.0d,
+	text: [
+		"Silver ore -> Silver ingot. It's that simple."
+	],
+	dependencies: [
+		"fd6033c6"
+	],
+	tasks: [{
+		uid: "07bbf97f",
+		type: "item",
+		items: [{
+			item: "gregtech:meta_item_1 1 10062"
+		}]
+	}]
+}

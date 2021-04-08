@@ -287,6 +287,10 @@ assembler.findRecipe(8,[<gregtech:meta_item_2:32455>*2,<gregtech:meta_item_2:324
 assembler.findRecipe(8,[<gregtech:meta_item_2:32455>*2,<gregtech:meta_item_2:32447>,<gregtech:meta_item_2:32477>,<gregtech:meta_item_2:16018>],[<liquid:tin>*144]).remove();
 recipes.addShaped(<gregtech:meta_item_2:32488> * 1, [[<gregtech:meta_item_1:10035>, <gregtech:meta_item_1:10035>, <gregtech:meta_item_1:10035>], [<gregtech:meta_item_1:10012>, <gregtech:meta_item_2:32487>, <gregtech:meta_item_1:10012>],[<gregtech:meta_item_1:10079>, <gregtech:meta_item_1:10079>, <gregtech:meta_item_1:10079>]]);
 
+//removing gold dust
+
+recipes.remove(<thermalfoundation:material:1>);
+
 //LV MINER
 
 val TierTwoMinerRecipe = mods.modularmachinery.RecipeBuilder.newBuilder("T2MINE","t2miner",100,0);

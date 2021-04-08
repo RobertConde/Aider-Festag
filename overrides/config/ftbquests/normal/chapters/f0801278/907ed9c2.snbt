@@ -1,0 +1,17 @@
+{
+	x: 6.5d,
+	y: -1.5d,
+	text: [
+		"Centrifuge sticky resin"
+	],
+	dependencies: [
+		"15386079"
+	],
+	tasks: [{
+		uid: "40e70527",
+		type: "item",
+		items: [{
+			item: "gregtech:meta_item_1 1 2153"
+		}]
+	}]
+}

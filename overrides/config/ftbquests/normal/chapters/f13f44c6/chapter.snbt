@@ -1,0 +1,7 @@
+{
+	title: "MV element processing",
+	icon: "gregtech:meta_item_1 1 2016",
+	always_invisible: false,
+	group: -1771938434,
+	default_quest_shape: ""
+}

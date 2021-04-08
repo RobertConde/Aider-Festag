@@ -1,0 +1,18 @@
+{
+	x: 12.0d,
+	y: 6.5d,
+	description: "LV circuit",
+	text: [
+		"Yes, circuits are recursive."
+	],
+	dependencies: [
+		"021d2b9f"
+	],
+	tasks: [{
+		uid: "41a6df2d",
+		type: "item",
+		items: [{
+			item: "gregtech:meta_item_2 1 32488"
+		}]
+	}]
+}

@@ -1,0 +1,17 @@
+{
+	x: 22.5d,
+	y: 7.5d,
+	text: [
+		"Used in multiblocks in the near future..."
+	],
+	dependencies: [
+		"094687b9"
+	],
+	tasks: [{
+		uid: "3360661e",
+		type: "item",
+		items: [{
+			item: "gregtech:metal_casing 1 4"
+		}]
+	}]
+}

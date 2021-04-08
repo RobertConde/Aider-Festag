@@ -1,0 +1,20 @@
+{
+	x: 27.0d,
+	y: 6.0d,
+	shape: "gear",
+	text: [
+		"Check JEI for instructions on how to build the multiblock."
+	],
+	dependencies: [
+		"dc6668e8",
+		"64c642e5"
+	],
+	size: 2.0d,
+	tasks: [{
+		uid: "a3329f97",
+		type: "item",
+		items: [{
+			item: "gregtech:machine 1 511"
+		}]
+	}]
+}
