@@ -105,9 +105,18 @@ chemreactor.recipeBuilder()
 
 electrolyzer.findRecipe(60,[<gregtech:meta_item_1:2105>*13],null).remove();
 
+//MAGNESIUM LINE
 
-
-
+/*
+centrifuge.recipeBuilder()
+    .fluidInputs([<liquid:salt_water>*2000])
+    .fluidOutputs([<liquid:lithiumbrine>*1000])
+    .outputs(<gregtech:meta_item_1:2155>*1)
+    .notConsumable(<gregtech:meta_item_1:32766>.withTag({Configuration: 8}))
+    .EUt(32)
+    .duration(600)
+    .buildAndRegister();
+*/
 
 
 
