@@ -1,0 +1,21 @@
+{
+	x: 6.5d,
+	y: 6.0d,
+	shape: "gear",
+	dependencies: [
+		"7e44cdab"
+	],
+	tasks: [{
+		uid: "68a08d56",
+		type: "item",
+		items: [{
+			id: "forge:bucketfilled",
+			tag: {
+				FluidName: "nitrogen",
+				Amount: 1000
+			}
+		}],
+		ignore_damage: true,
+		ignore_nbt: 1b
+	}]
+}

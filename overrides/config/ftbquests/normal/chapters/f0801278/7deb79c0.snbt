@@ -1,6 +1,7 @@
 {
-	x: 25.0d,
-	y: -2.0d,
+	x: 21.5d,
+	y: 1.0d,
+	shape: "gear",
 	description: "Build the Electroplater",
 	text: [
 		"Check LV element processing for the nickel processing line.",

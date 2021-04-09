@@ -1,0 +1,14 @@
+{
+	title: "The Beginning",
+	x: -1.0d,
+	y: -5.0d,
+	text: [
+		"The Custom elements are various challenges made as a tribute to some of my friends. ",
+		"",
+		"Their processes are completely made up, unrealistic, challenging, and somewhat useless. They serve as mostly a trophy."
+	],
+	tasks: [{
+		uid: "f45f2e2e",
+		type: "checkmark"
+	}]
+}

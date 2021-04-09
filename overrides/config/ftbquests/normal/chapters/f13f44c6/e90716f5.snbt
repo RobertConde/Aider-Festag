@@ -1,0 +1,18 @@
+{
+	x: -4.0d,
+	y: 0.0d,
+	description: "Oh no...",
+	text: [
+		"Chromium is used for stainless steel, which will gate HV for you.",
+		"",
+		"",
+		"This process is a step up from LV ones. Carefully manage the inputs and outputs, do not clutter your setups."
+	],
+	tasks: [{
+		uid: "9c591ffa",
+		type: "item",
+		items: [{
+			item: "gregtech:ore_chromite_0"
+		}]
+	}]
+}

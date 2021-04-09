@@ -1,6 +1,6 @@
 {
-	x: 12.0d,
-	y: 6.5d,
+	x: 12.5d,
+	y: 5.0d,
 	description: "LV circuit",
 	text: [
 		"Yes, circuits are recursive."

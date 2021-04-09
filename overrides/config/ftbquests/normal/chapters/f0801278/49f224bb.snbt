@@ -1,0 +1,18 @@
+{
+	x: 18.0d,
+	y: 1.5d,
+	shape: "heart",
+	text: [
+		"Yes, there will be obscure challenges like this one."
+	],
+	dependencies: [
+		"362786ad"
+	],
+	tasks: [{
+		uid: "f7e3a7f4",
+		type: "item",
+		items: [{
+			item: "contenttweaker:material_part 1 40"
+		}]
+	}]
+}

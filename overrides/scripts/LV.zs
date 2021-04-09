@@ -10,6 +10,8 @@ import crafttweaker.recipes.IRecipeFunction;
 import crafttweaker.recipes.IRecipeAction;
 import crafttweaker.liquid.ILiquidStack;
 
+print("-----------------LOADING LV-----------------");
+
 // Chisel Recipe
 recipes.remove(<chisel:chisel_iron>);
 recipes.addShaped(<chisel:chisel_iron> * 1, [[null, <gregtech:meta_item_1:10197>, null], [<minecraft:stick>, null, null],[null, null, null]]);
@@ -310,7 +312,7 @@ TierTwoMinerRecipe.addItemOutput(<gregtech:ore_silver_0>*6);
 TierTwoMinerRecipe.addItemOutput(<gregtech:ore_bauxite_0>*6);
 TierTwoMinerRecipe.addItemOutput(<minecraft:gold_ore>*6);
 TierTwoMinerRecipe.addItemOutput(<gregtech:ore_nickel_0>*6);
-TierTwoMinerRecipe.addItemOutput(<gregtech:ore_chromite_0>*6);
+TierTwoMinerRecipe.addItemOutput(<gregtech:meta_item_1:2155>*16);
 TierTwoMinerRecipe.addItemOutput(<gregtech:ore_pyrolusite_0>*6);
 TierTwoMinerRecipe.build();
 
@@ -573,3 +575,30 @@ centrifuge.findRecipe(24,[<gregtech:meta_item_1:3044>],null).remove();
 //adding impure nickel dust recipe
 
 furnace.addRecipe(<gregtech:meta_item_1:3044>,<gregtech:ore_nickel_0>);
+
+//Atoium process
+
+mods.modularmachinery.RecipeBuilder.newBuilder("chickenfluid","eggfurnace",1000)
+    .addItemInput(<minecraft:egg>*64)
+    .addItemInput(<minecraft:chicken>*1)
+    .addFluidOutput(<liquid:chickenfluid>*144)
+    .build();
+
+mods.modularmachinery.RecipeBuilder.newBuilder("refinedchickenfluidrecipe","solarevaporationplant",600)
+    .addFluidInput(<liquid:chickenfluid>*144)
+    .addFluidOutput(<liquid:refinedchickenfluid>*72)
+    .build();
+
+chemreactor.recipeBuilder()
+    .fluidInputs([<liquid:refinedchickenfluid>*144,<liquid:sulfuric_acid>*144])
+    .fluidOutputs([<liquid:purechickenfluid>*72])
+    .EUt(16)
+    .duration(400)
+    .buildAndRegister();
+
+chemreactor.recipeBuilder()
+    .fluidInputs([<liquid:purechickenfluid>*288])
+    .outputs(<contenttweaker:material_part:40>*1)
+    .EUt(16)
+    .duration(1000)
+    .buildAndRegister();

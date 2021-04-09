@@ -1,0 +1,7 @@
+{
+	title: "Custom Elements",
+	icon: "contenttweaker:material_part 1 40",
+	always_invisible: false,
+	group: 495149803,
+	default_quest_shape: ""
+}

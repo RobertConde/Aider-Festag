@@ -1,0 +1,22 @@
+{
+	x: 13.5d,
+	y: -3.0d,
+	shape: "gear",
+	dependencies: [
+		"fd6033c6",
+		"a47e5079"
+	],
+	tasks: [{
+		uid: "26105bc8",
+		type: "item",
+		items: [{
+			id: "forge:bucketfilled",
+			tag: {
+				FluidName: "chlorine",
+				Amount: 1000
+			}
+		}],
+		ignore_damage: true,
+		ignore_nbt: 1b
+	}]
+}

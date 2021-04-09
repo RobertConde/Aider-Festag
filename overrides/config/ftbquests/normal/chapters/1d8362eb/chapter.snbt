@@ -1,6 +1,6 @@
 {
-	title: "Challenges",
-	icon: "minecraft:nether_star",
+	title: "Elements",
+	icon: "chisel:futura 1 2",
 	always_invisible: false,
 	group: 0,
 	default_quest_shape: ""

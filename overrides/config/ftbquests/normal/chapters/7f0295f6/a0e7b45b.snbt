@@ -1,0 +1,20 @@
+{
+	x: 6.0d,
+	y: 4.5d,
+	dependencies: [
+		"2688cef4"
+	],
+	tasks: [{
+		uid: "28b8612f",
+		type: "item",
+		items: [{
+			id: "forge:bucketfilled",
+			tag: {
+				FluidName: "refinedchickenfluid",
+				Amount: 1000
+			}
+		}],
+		ignore_damage: true,
+		ignore_nbt: 1b
+	}]
+}

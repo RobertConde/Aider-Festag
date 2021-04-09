@@ -1,7 +1,7 @@
 {
 	title: "Wrench",
-	x: 5.0d,
-	y: -0.5d,
+	x: 2.0d,
+	y: 0.0d,
 	text: [
 		"Standard gregtech tool to configure machines."
 	],

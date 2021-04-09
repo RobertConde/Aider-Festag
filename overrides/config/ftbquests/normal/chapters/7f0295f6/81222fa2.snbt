@@ -1,0 +1,23 @@
+{
+	x: 0.0d,
+	y: 4.5d,
+	description: "What is this>!>!>>!??!?!",
+	text: [
+		"Your first custom element visits you during your pleasent journey through the LV voltage tier. I wonder where the eggs will come from..."
+	],
+	tasks: [{
+		uid: "9b254451",
+		type: "item",
+		items: [{
+			item: "minecraft:egg"
+		}],
+		count: 64L
+	},
+	{
+		uid: "fa292808",
+		type: "item",
+		items: [{
+			item: "minecraft:chicken"
+		}]
+	}]
+}

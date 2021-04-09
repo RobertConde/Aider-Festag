@@ -1,6 +1,6 @@
 {
-	x: 6.0d,
-	y: 5.5d,
+	x: -1.0d,
+	y: 2.0d,
 	text: [
 		"You might notice some reactions have a \"products dust\". There were not enough faces on the machines to accomodate for all the inputs/outputs.",
 		"This artificially adds an extra step, I'm sorry... :("

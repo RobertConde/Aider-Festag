@@ -7,6 +7,7 @@ import mods.contenttweaker.VanillaFactory;
 import mods.contenttweaker.Color;
 import crafttweaker.game.IGame;
 
+print("-----------------Loading Custom Items-----------------");
 /* ITEM #s AREN'T NECESSARILY ACCURATE */
 
 // 0,1: Lead(II) Oxide
@@ -151,3 +152,43 @@ nickelElectrode10.registerParts(["rod"] as string[]);
 
 var nickelElectrode11 = MaterialSystem.getMaterialBuilder().setName("Nickel Electrode [Pure]").setColor("727472").build();
 nickelElectrode11.registerParts(["rod"] as string[]);
+
+//chicken fluid
+
+var chickenfluid = VanillaFactory.createFluid("chickenfluid", Color.fromHex("102901"));
+chickenfluid.register();
+
+//refined chicken fluid
+
+var refinedchickenfluid = VanillaFactory.createFluid("refinedchickenfluid", Color.fromHex("468152"));
+refinedchickenfluid.register();
+
+//pure chicken fluid
+
+var purechickenfluid = VanillaFactory.createFluid("purechickenfluid", Color.fromHex("159824"));
+purechickenfluid.register();
+
+//atoium ingot
+
+var atoium = MaterialSystem.getMaterialBuilder().setName("Atoium").setColor("8974215").build();
+atoium.registerParts(["ingot"] as string[]);
+
+//magnesium brine
+
+var magnesiumbrine = VanillaFactory.createFluid("magnesiumbrine",Color.fromHex("129910"));
+magnesiumbrine.register();
+
+//Calcium 2+ solution
+
+var calcium2 = VanillaFactory.createFluid("calcium2",Color.fromHex("748221"));
+calcium2.register();
+
+//Magnesium 2+ solution
+
+var magnesium2 = VanillaFactory.createFluid("magnesium2",Color.fromHex("160005"));
+magnesium2.register();
+
+//magnesium hydroxide
+
+var magnesiumhydroxide = MaterialSystem.getMaterialBuilder().setName("Magnesium Hydroxide").setColor("471122").build();
+magnesiumhydroxide.registerParts(["ingot"] as string[]);

@@ -1,7 +1,8 @@
 {
 	title: "Start of LV elements",
-	x: 17.0d,
-	y: 0.5d,
+	x: 14.25d,
+	y: 0.75d,
+	shape: "octagon",
 	text: [
 		"It's time to get into more complex processing lines. ",
 		"",
@@ -12,6 +13,7 @@
 	dependencies: [
 		"6298753e"
 	],
+	size: 1.5d,
 	tasks: [{
 		uid: "e5cf5510",
 		type: "checkmark",

@@ -75,7 +75,7 @@ chemreactor.recipeBuilder()
 
 chemreactor.recipeBuilder()
     .inputs(<contenttweaker:material_part:24>*16)
-    .outputs(<contenttweaker:material_part:25>*16)
+    .outputs(<contenttweaker:material_part:25>*8)
     .EUt(120)
     .duration(1200)
     .buildAndRegister();
@@ -107,16 +107,80 @@ electrolyzer.findRecipe(60,[<gregtech:meta_item_1:2105>*13],null).remove();
 
 //MAGNESIUM LINE
 
-/*
+//first step magnesium brine
 centrifuge.recipeBuilder()
     .fluidInputs([<liquid:salt_water>*2000])
-    .fluidOutputs([<liquid:lithiumbrine>*1000])
+    .fluidOutputs([<liquid:magnesiumbrine>*1000])
     .outputs(<gregtech:meta_item_1:2155>*1)
-    .notConsumable(<gregtech:meta_item_1:32766>.withTag({Configuration: 8}))
-    .EUt(32)
+    .notConsumable(<gregtech:meta_item_1:32766>.withTag({Configuration: 5}))
+    .EUt(64)
     .duration(600)
     .buildAndRegister();
-*/
+    
+// second step MG 2+ solution
+
+chemreactor.recipeBuilder()
+    .fluidInputs([<liquid:magnesiumbrine>*144])
+    .fluidOutputs([<liquid:magnesium2>*144])
+    .outputs(<gregtech:meta_item_1:2155>*1)
+    .EUt(64)
+    .duration(40)
+    .buildAndRegister();
+
+//third step Magnesium Hydroxide
+
+chemreactor.recipeBuilder()
+    .fluidInputs([<liquid:water>*144,<liquid:magnesium2>*144])
+    .inputs(<gregtech:meta_item_1:2374>*1)
+    .fluidOutputs([<liquid:calcium2>*144])
+    .outputs(<contenttweaker:material_part:41>*1)
+    .EUt(100)
+    .duration(60)
+    .buildAndRegister();
+
+//fourth step Magnesium Chloride
+
+chemreactor.recipeBuilder()
+    .fluidInputs([<liquid:hydrochloric_acid>*288])
+    .inputs(<contenttweaker:material_part:41>*1)
+    .fluidOutputs(<liquid:water>*288)
+    .outputs(<gregtech:meta_item_1:2125>*1)
+    .EUt(111)
+    .duration(80)
+    .buildAndRegister();
+
+//last step is already in gregtech
+
+//processing calcium2
+
+mods.modularmachinery.RecipeBuilder.newBuilder("ca2waste","ionizer",20)
+    .addItemOutput(<gregtech:meta_item_1:2011>)
+    .addFluidInput(<fluid:calcium2>*144)
+    .build();
+
+
+//CIRCUITS
+
+// Good Electronic Circuit
+recipes.remove(<gregtech:meta_item_2:32489>);
+assembler.findRecipe(16,[<gregtech:meta_item_2:16112>*8,<gregtech:meta_item_2:32455>*4,<gregtech:meta_item_2:32488>*3,<gregtech:meta_item_2:32447>*1],[<liquid:tin>*144]).remove();
+assembler.findRecipe(16,[<gregtech:meta_item_2:16112>*8,<gregtech:meta_item_2:32455>*4,<gregtech:meta_item_2:32488>*3,<gregtech:meta_item_2:32447>*1],[<liquid:soldering_alloy>*72]).remove();
+assembler.findRecipe(16,[<gregtech:meta_item_2:16112>*8,<gregtech:meta_item_2:32459>*4,<gregtech:meta_item_2:32488>*3,<gregtech:meta_item_2:32447>*1],[<liquid:tin>*144]).remove();
+assembler.findRecipe(16,[<gregtech:meta_item_2:16112>*8,<gregtech:meta_item_2:32459>*4,<gregtech:meta_item_2:32488>*3,<gregtech:meta_item_2:32447>*1],[<liquid:soldering_alloy>*72]).remove();
+
+recipes.addShaped(<gregtech:meta_item_2:32489> * 1, [[<gregtech:meta_item_1:2036>, <gregtech:meta_item_1:2036>, <gregtech:meta_item_1:2036>], [<gregtech:meta_item_1:2039>, <gregtech:meta_item_2:32488>, <gregtech:meta_item_1:2063>],[<gregtech:meta_item_1:10062>, <gregtech:meta_item_1:10184>, <contenttweaker:material_part:14>]]);
+
+// Integrated Processor
+
+assembler.findRecipe(60,[<gregtech:meta_item_2:32455>*2,<gregtech:meta_item_2:32452>*2,<gregtech:meta_item_2:32461>*2,<gregtech:meta_item_2:16237>*2,<gregtech:meta_item_2:32448>*1,<gregtech:meta_item_2:32478>*1],[<liquid:tin>*144]).remove();
+assembler.findRecipe(60,[<gregtech:meta_item_2:32459>*2,<gregtech:meta_item_2:32458>*2,<gregtech:meta_item_2:32460>*2,<gregtech:meta_item_2:16237>*2,<gregtech:meta_item_2:32448>*1,<gregtech:meta_item_2:32478>*1],[<liquid:tin>*144]).remove();
+assembler.findRecipe(2400,[<gregtech:meta_item_2:16237>*2,<gregtech:meta_item_2:32448>*1,<gregtech:meta_item_2:32486>*1],[<liquid:tin>*144]).remove();
+assembler.findRecipe(60,[<gregtech:meta_item_2:32455>*2,<gregtech:meta_item_2:32452>*2,<gregtech:meta_item_2:32461>*2,<gregtech:meta_item_2:16237>*2,<gregtech:meta_item_2:32448>*1,<gregtech:meta_item_2:32478>*1],[<liquid:soldering_alloy>*72]).remove();
+assembler.findRecipe(60,[<gregtech:meta_item_2:32459>*2,<gregtech:meta_item_2:32458>*2,<gregtech:meta_item_2:32460>*2,<gregtech:meta_item_2:16237>*2,<gregtech:meta_item_2:32448>*1,<gregtech:meta_item_2:32478>*1],[<liquid:soldering_alloy>*72]).remove();
+assembler.findRecipe(2400,[<gregtech:meta_item_2:16237>*2,<gregtech:meta_item_2:32448>*1,<gregtech:meta_item_2:32486>*1],[<liquid:soldering_alloy>*72]).remove();
+
+recipes.addShaped(<gregtech:meta_item_2:32490> * 1, [[<gregtech:meta_item_1:10001>, <gregtech:meta_item_1:10001>, <gregtech:meta_item_1:10001>], [<gregtech:meta_item_1:10044>, <gregtech:meta_item_2:32489>, <gregtech:meta_item_1:10044>],[<gregtech:meta_item_1:10152>, <gregtech:meta_item_1:10152>, <gregtech:meta_item_1:10152>]]);
+
 
 
 

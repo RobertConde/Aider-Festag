@@ -1,0 +1,7 @@
+{
+	title: "Periodic Table",
+	icon: "gregtech:meta_item_1 1 12140",
+	always_invisible: false,
+	group: 495149803,
+	default_quest_shape: ""
+}

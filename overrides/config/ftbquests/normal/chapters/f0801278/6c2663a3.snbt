@@ -1,7 +1,10 @@
 {
 	x: 16.25d,
-	y: 7.5d,
+	y: 6.25d,
 	shape: "gear",
+	text: [
+		"Remember, chisel is your friend. I think MV will be harder, longer, and more interesting."
+	],
 	dependencies: [
 		"7eace0dd",
 		"362786ad",

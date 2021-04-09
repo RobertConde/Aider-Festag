@@ -1,6 +1,6 @@
 {
 	title: "Tier Two Miner",
-	x: 13.0d,
+	x: 10.0d,
 	y: 0.5d,
 	description: "It's Grind time",
 	text: [
