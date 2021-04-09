@@ -18,9 +18,18 @@ recipes.addShaped(<chisel:chisel_iron> * 1, [[null, <gregtech:meta_item_1:10197>
 recipes.remove(<nuclearcraft:manufactory_idle>);
 recipes.addShaped(<nuclearcraft:manufactory_idle> * 1, [[<nuclearcraft:part:0>, <gregtech:meta_item_2:32488>, <nuclearcraft:part:0>], [<gregtech:meta_item_2:32488>, <gregtech:machine:501>, <gregtech:meta_item_2:32488>],[<nuclearcraft:part:0>, <gregtech:meta_item_2:32488>, <nuclearcraft:part:0>]]);
 
-// Sand Recipes
-recipes.remove(<appliedenergistics2:grindstone>);   // Remove AE grindstone
+// Remove AE grindstone
 
+recipes.remove(<appliedenergistics2:grindstone>);   
+mods.jei.JEI.removeAndHide(<appliedenergistics2:grindstone>);
+
+// Remove cauldron
+
+recipes.remove(<minecraft:cauldron>);
+mods.jei.JEI.removeAndHide(<minecraft:cauldron>);
+
+
+// Sand Recipes
 mods.nuclearcraft.manufactory.removeAllRecipes();
 mods.nuclearcraft.manufactory.addRecipe([<ore:cobblestone>, <minecraft:sand>]);
 
@@ -457,77 +466,110 @@ electrolyzer.recipeBuilder()
 mods.modularmachinery.RecipeBuilder.newBuilder("nickelelectrode_50_0", "electroplater", 1000)
     .addItemInput(<gregtech:meta_item_1:14062>) // Silver Rod
     .addItemInput(<gregtech:meta_item_1:3044>)
-    .addFluidInput(<liquid:water>*1000);
+    .addFluidInput(<liquid:water>*1000)
     .addItemOutput(<contenttweaker:material_part:29>)
+    .addEnergyPerTickInput(16)
     .build();
 
 mods.modularmachinery.RecipeBuilder.newBuilder("nickelelectrode_75_0", "electroplater", 1000)
     .addItemInput(<contenttweaker:material_part:29>)
     .addItemInput(<gregtech:meta_item_1:3044>)
-    .addFluidInput(<liquid:water>*1000);
+    .addFluidInput(<liquid:water>*1000)
     .addItemOutput(<contenttweaker:material_part:30>)
+    .addEnergyPerTickInput(16)
     .build();
 
 mods.modularmachinery.RecipeBuilder.newBuilder("nickelelectrode_87_5", "electroplater", 1000)
     .addItemInput(<contenttweaker:material_part:30>)
     .addItemInput(<gregtech:meta_item_1:3044>)
-    .addFluidInput(<liquid:water>*1000);
+    .addFluidInput(<liquid:water>*1000)
     .addItemOutput(<contenttweaker:material_part:31>)
+    .addEnergyPerTickInput(16)
     .build();
 
 mods.modularmachinery.RecipeBuilder.newBuilder("nickelelectrode_93_4", "electroplater", 1000)
     .addItemInput(<contenttweaker:material_part:31>)
     .addItemInput(<gregtech:meta_item_1:3044>)
-    .addFluidInput(<liquid:water>*1000);
+    .addFluidInput(<liquid:water>*1000)
     .addItemOutput(<contenttweaker:material_part:32>)
+    .addEnergyPerTickInput(16)
     .build();
 
 mods.modularmachinery.RecipeBuilder.newBuilder("nickelelectrode_96_9", "electroplater", 1000)
     .addItemInput(<contenttweaker:material_part:32>)
     .addItemInput(<gregtech:meta_item_1:3044>)
-    .addFluidInput(<liquid:water>*1000);
+    .addFluidInput(<liquid:water>*1000)
     .addItemOutput(<contenttweaker:material_part:33>)
+    .addEnergyPerTickInput(16)
     .build();
 
 mods.modularmachinery.RecipeBuilder.newBuilder("nickelelectrode_98_4", "electroplater", 1000)
     .addItemInput(<contenttweaker:material_part:33>)
     .addItemInput(<gregtech:meta_item_1:3044>)
-    .addFluidInput(<liquid:water>*1000);
+    .addFluidInput(<liquid:water>*1000)
     .addItemOutput(<contenttweaker:material_part:34>)
+    .addEnergyPerTickInput(16)
     .build();
 
 mods.modularmachinery.RecipeBuilder.newBuilder("nickelelectrode_99_2", "electroplater", 1000)
     .addItemInput(<contenttweaker:material_part:34>)
     .addItemInput(<gregtech:meta_item_1:3044>)
-    .addFluidInput(<liquid:water>*1000);
+    .addFluidInput(<liquid:water>*1000)
     .addItemOutput(<contenttweaker:material_part:35>)
+    .addEnergyPerTickInput(16)
     .build();
 
 mods.modularmachinery.RecipeBuilder.newBuilder("nickelelectrode_99_6", "electroplater", 1000)
     .addItemInput(<contenttweaker:material_part:35>)
     .addItemInput(<gregtech:meta_item_1:3044>)
-    .addFluidInput(<liquid:water>*1000);
+    .addFluidInput(<liquid:water>*1000)
     .addItemOutput(<contenttweaker:material_part:36>)
+    .addEnergyPerTickInput(16)
     .build();
 
 mods.modularmachinery.RecipeBuilder.newBuilder("nickelelectrode_99_8", "electroplater", 1000)
     .addItemInput(<contenttweaker:material_part:36>)
     .addItemInput(<gregtech:meta_item_1:3044>)
-    .addFluidInput(<liquid:water>*1000);
+    .addFluidInput(<liquid:water>*1000)
     .addItemOutput(<contenttweaker:material_part:37>)
+    .addEnergyPerTickInput(16)
     .build();
 
 mods.modularmachinery.RecipeBuilder.newBuilder("nickelelectrode_99_9", "electroplater", 1000)
     .addItemInput(<contenttweaker:material_part:37>)
     .addItemInput(<gregtech:meta_item_1:3044>)
-    .addFluidInput(<liquid:water>*1000);
+    .addFluidInput(<liquid:water>*1000)
     .addItemOutput(<contenttweaker:material_part:38>)
+    .addEnergyPerTickInput(16)
     .build();
 
 mods.modularmachinery.RecipeBuilder.newBuilder("nickelelectrode_pure", "electroplater", 1000)
     .addItemInput(<contenttweaker:material_part:38>)
     .addItemInput(<gregtech:meta_item_1:3044>)
-    .addFluidInput(<liquid:water>*1000);
+    .addFluidInput(<liquid:water>*1000)
     .addItemOutput(<contenttweaker:material_part:39>)
+    .addEnergyPerTickInput(16)
     .build();
- 
+
+//electrode -> nickel (32 ingots)
+fluid_extractor.recipeBuilder()
+    .inputs(<contenttweaker:material_part:39>*1)
+    .fluidOutputs([<liquid:nickel>*4608])
+    .EUt(4)
+    .duration(2000)
+    .buildAndRegister();
+
+//removing nickel recipes
+
+recipes.remove(<thermalfoundation:material:69>);
+recipes.remove(<thermalfoundation:material:133>);
+furnace.remove(<gregtech:meta_item_1:10044>);
+fluid_extractor.findRecipe(48,[<gregtech:ore_nickel_0>],null).remove();
+macerator.findRecipe(12,[<gregtech:ore_nickel_0>],null).remove();
+hammer.findRecipe(6,[<gregtech:ore_nickel_0>],null).remove();
+recipes.remove(<gregtech:meta_item_1:3044>);
+centrifuge.findRecipe(24,[<gregtech:meta_item_1:3044>],null).remove();
+
+//adding impure nickel dust recipe
+
+furnace.addRecipe(<gregtech:meta_item_1:3044>,<gregtech:ore_nickel_0>);

@@ -155,4 +155,23 @@ recipes.addShaped(<modularmachinery:blockfluidoutputhatch:6> * 1, [[null, null, 
 recipes.remove(<modularmachinery:blockfluidoutputhatch:7>);
 recipes.addShaped(<modularmachinery:blockfluidoutputhatch:7> * 1, [[null, null, null], [<modularmachinery:itemmodularium>, <modularmachinery:blockfluidoutputhatch:6>, null],[<modularmachinery:itemmodularium>, <modularmachinery:itemmodularium>, <modularmachinery:itemmodularium>]]);
 
+//removing ore washing
+
+recipes.remove(<gregtech:machine:380>);
+recipes.remove(<gregtech:machine:381>);
+recipes.remove(<gregtech:machine:382>);
+recipes.remove(<gregtech:machine:383>);
+recipes.remove(<gregtech:machine:2136>);
+recipes.remove(<gregtech:machine:2137>);
+recipes.remove(<gregtech:machine:2138>);
+recipes.remove(<gregtech:machine:2139>);
+
+mods.jei.JEI.removeAndHide(<gregtech:machine:380>);
+mods.jei.JEI.removeAndHide(<gregtech:machine:381>);
+mods.jei.JEI.removeAndHide(<gregtech:machine:382>);
+mods.jei.JEI.removeAndHide(<gregtech:machine:383>);
+mods.jei.JEI.removeAndHide(<gregtech:machine:2136>);
+mods.jei.JEI.removeAndHide(<gregtech:machine:2137>);
+mods.jei.JEI.removeAndHide(<gregtech:machine:2138>);
+mods.jei.JEI.removeAndHide(<gregtech:machine:2139>);
 print("-----------------Finished Loading Thermal Expansion-----------------");

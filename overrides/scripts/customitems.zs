@@ -118,37 +118,36 @@ var lithiumchloride = MaterialSystem.getMaterialBuilder().setName("Lithium Chlor
 lithiumchloride.registerParts(["dust"] as string[]);
 
 // Nickel Electrodes
-var nickelElectrode;
 
-nickelElectrode = MaterialSystem.getMaterialBuilder().setName("Nickel Electrode [50.0%]").setColor("727472").build();
-nickelElectrode.registerParts(["rod"] as string[]);
+var nickelElectrode1 = MaterialSystem.getMaterialBuilder().setName("Nickel Electrode [50.0%]").setColor("727472").build();
+nickelElectrode1.registerParts(["rod"] as string[]);
 
-nickelElectrode = MaterialSystem.getMaterialBuilder().setName("Nickel Electrode [75.0%]").setColor("727472").build();
-nickelElectrode.registerParts(["rod"] as string[]);
+var nickelElectrode2 = MaterialSystem.getMaterialBuilder().setName("Nickel Electrode [75.0%]").setColor("727472").build();
+nickelElectrode2.registerParts(["rod"] as string[]);
 
-nickelElectrode = MaterialSystem.getMaterialBuilder().setName("Nickel Electrode [87.5%]").setColor("727472").build();
-nickelElectrode.registerParts(["rod"] as string[]);
+var nickelElectrode3 = MaterialSystem.getMaterialBuilder().setName("Nickel Electrode [87.5%]").setColor("727472").build();
+nickelElectrode3.registerParts(["rod"] as string[]);
 
-nickelElectrode = MaterialSystem.getMaterialBuilder().setName("Nickel Electrode [93.4%]").setColor("727472").build();
-nickelElectrode.registerParts(["rod"] as string[]);
+var nickelElectrode4 = MaterialSystem.getMaterialBuilder().setName("Nickel Electrode [93.4%]").setColor("727472").build();
+nickelElectrode4.registerParts(["rod"] as string[]);
 
-nickelElectrode = MaterialSystem.getMaterialBuilder().setName("Nickel Electrode [96.9%]").setColor("727472").build();
-nickelElectrode.registerParts(["rod"] as string[]);
+var nickelElectrode5 = MaterialSystem.getMaterialBuilder().setName("Nickel Electrode [96.9%]").setColor("727472").build();
+nickelElectrode5.registerParts(["rod"] as string[]);
 
-nickelElectrode = MaterialSystem.getMaterialBuilder().setName("Nickel Electrode [98.4%]").setColor("727472").build();
-nickelElectrode.registerParts(["rod"] as string[]);
+var nickelElectrode6 = MaterialSystem.getMaterialBuilder().setName("Nickel Electrode [98.4%]").setColor("727472").build();
+nickelElectrode6.registerParts(["rod"] as string[]);
 
-nickelElectrode = MaterialSystem.getMaterialBuilder().setName("Nickel Electrode [99.2%]").setColor("727472").build();
-nickelElectrode.registerParts(["rod"] as string[]);
+var nickelElectrode7 = MaterialSystem.getMaterialBuilder().setName("Nickel Electrode [99.2%]").setColor("727472").build();
+nickelElectrode7.registerParts(["rod"] as string[]);
 
-nickelElectrode = MaterialSystem.getMaterialBuilder().setName("Nickel Electrode [99.6%]").setColor("727472").build();
-nickelElectrode.registerParts(["rod"] as string[]);
+var nickelElectrode8 = MaterialSystem.getMaterialBuilder().setName("Nickel Electrode [99.6%]").setColor("727472").build();
+nickelElectrode8.registerParts(["rod"] as string[]);
 
-nickelElectrode = MaterialSystem.getMaterialBuilder().setName("Nickel Electrode [99.8%]").setColor("727472").build();
-nickelElectrode.registerParts(["rod"] as string[]);
+var nickelElectrode9 = MaterialSystem.getMaterialBuilder().setName("Nickel Electrode [99.8%]").setColor("727472").build();
+nickelElectrode9.registerParts(["rod"] as string[]);
 
-nickelElectrode = MaterialSystem.getMaterialBuilder().setName("Nickel Electrode [99.9%]").setColor("727472").build();
-nickelElectrode.registerParts(["rod"] as string[]);
+var nickelElectrode10 = MaterialSystem.getMaterialBuilder().setName("Nickel Electrode [99.9%]").setColor("727472").build();
+nickelElectrode10.registerParts(["rod"] as string[]);
 
-nickelElectrode = MaterialSystem.getMaterialBuilder().setName("Nickel Electrode [Pure]").setColor("727472").build();
-nickelElectrode.registerParts(["rod"] as string[]);
+var nickelElectrode11 = MaterialSystem.getMaterialBuilder().setName("Nickel Electrode [Pure]").setColor("727472").build();
+nickelElectrode11.registerParts(["rod"] as string[]);
