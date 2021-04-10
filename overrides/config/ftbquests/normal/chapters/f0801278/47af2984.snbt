@@ -1,6 +1,9 @@
 {
 	x: 6.5d,
 	y: 2.5d,
+	text: [
+		"Air will be very useful for collecting atmospheric gases"
+	],
 	dependencies: [
 		"15386079"
 	],

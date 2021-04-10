@@ -1,9 +1,11 @@
 {
 	x: 24.0d,
-	y: 6.0d,
+	y: 9.0d,
 	shape: "gear",
 	text: [
-		"Check JEI for instructions on how to build the multiblock."
+		"Check JEI for instructions on how to build the multiblock.",
+		"",
+		"Extremely in MV processing lines. You may want to build more than one."
 	],
 	dependencies: [
 		"dc6668e8",

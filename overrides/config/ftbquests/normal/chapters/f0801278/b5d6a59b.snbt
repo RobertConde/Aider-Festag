@@ -1,0 +1,17 @@
+{
+	x: 8.5d,
+	y: 2.0d,
+	text: [
+		"Made in the manufactory"
+	],
+	dependencies: [
+		"15386079"
+	],
+	tasks: [{
+		uid: "65a0a764",
+		type: "item",
+		items: [{
+			item: "minecraft:coal"
+		}]
+	}]
+}

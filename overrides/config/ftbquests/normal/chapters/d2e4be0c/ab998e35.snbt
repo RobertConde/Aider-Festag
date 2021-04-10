@@ -6,7 +6,7 @@
 		"Use to prevent the Chicken Man from haunting your dreams forever...",
 		"",
 		"",
-		"Intended to be made in LV"
+		"Can be made in LV"
 	],
 	dependencies: [
 		"d6f4c29b"

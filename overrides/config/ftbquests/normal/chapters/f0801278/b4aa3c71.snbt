@@ -1,7 +1,7 @@
 {
-	x: 25.0d,
-	y: 0.5d,
-	shape: "gear",
+	x: 21.5d,
+	y: 9.0d,
+	shape: "hexagon",
 	dependencies: [
 		"7deb79c0"
 	],

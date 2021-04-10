@@ -1,0 +1,19 @@
+{
+	x: 9.5d,
+	y: 10.0d,
+	shape: "hexagon",
+	description: "First MV circuit",
+	text: [
+		""
+	],
+	dependencies: [
+		"7eace0dd"
+	],
+	tasks: [{
+		uid: "05f3c207",
+		type: "item",
+		items: [{
+			item: "gregtech:meta_item_2 1 32489"
+		}]
+	}]
+}

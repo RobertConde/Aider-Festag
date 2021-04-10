@@ -1,12 +1,12 @@
 {
-	x: 18.0d,
-	y: 1.5d,
+	x: 16.0d,
+	y: 9.5d,
 	shape: "heart",
 	text: [
 		"Yes, there will be obscure challenges like this one."
 	],
 	dependencies: [
-		"362786ad"
+		"623d4beb"
 	],
 	tasks: [{
 		uid: "f7e3a7f4",

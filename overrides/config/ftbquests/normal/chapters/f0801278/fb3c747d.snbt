@@ -1,0 +1,17 @@
+{
+	x: 11.5d,
+	y: 8.0d,
+	text: [
+		"Used to build the Hall-Heroult process multiblock."
+	],
+	dependencies: [
+		"ab24976a"
+	],
+	tasks: [{
+		uid: "59a134a7",
+		type: "item",
+		items: [{
+			item: "nuclearcraft:ingot 1 8"
+		}]
+	}]
+}

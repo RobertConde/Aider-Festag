@@ -1,17 +1,18 @@
 {
 	x: 16.25d,
-	y: 6.25d,
+	y: 15.0d,
 	shape: "gear",
 	text: [
-		"Remember, chisel is your friend. I think MV will be harder, longer, and more interesting."
+		"Remember, chisel is your friend. I think MV will be harder, longer, and more interesting.",
+		"",
+		"You also unlock Applied Energestics 2 in MV, with autocrafting unlocked with stainless steel."
 	],
 	dependencies: [
-		"7eace0dd",
-		"362786ad",
 		"7deb79c0",
 		"05a0e414",
 		"6a9227fe",
-		"a13fb6f2"
+		"a13fb6f2",
+		"c9e552a0"
 	],
 	size: 2.5d,
 	tasks: [{

@@ -1,6 +1,6 @@
 {
-	x: 18.5d,
-	y: 6.0d,
+	x: 16.0d,
+	y: 11.0d,
 	shape: "gear",
 	description: "Build the Hall-Heroult Process Multiblock",
 	text: [
@@ -9,6 +9,7 @@
 		"Typically the MV material, however you're gonna need more than that to make an MV machine casing in this modpack..."
 	],
 	dependencies: [
+		"fb3c747d",
 		"623d4beb"
 	],
 	tasks: [{

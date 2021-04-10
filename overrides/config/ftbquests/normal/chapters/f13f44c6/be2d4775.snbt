@@ -1,0 +1,14 @@
+{
+	x: 8.0d,
+	y: 2.0d,
+	dependencies: [
+		"48050aa4"
+	],
+	tasks: [{
+		uid: "7ca93c96",
+		type: "item",
+		items: [{
+			item: "contenttweaker:material_part 1 46"
+		}]
+	}]
+}

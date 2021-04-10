@@ -1,0 +1,11 @@
+{
+	x: -4.0d,
+	y: 2.0d,
+	tasks: [{
+		uid: "7a3cc0c3",
+		type: "item",
+		items: [{
+			item: "contenttweaker:sub_block_holder_0 1 1"
+		}]
+	}]
+}

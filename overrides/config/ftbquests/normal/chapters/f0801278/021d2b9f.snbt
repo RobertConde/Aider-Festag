@@ -1,7 +1,8 @@
 {
 	x: 9.5d,
-	y: 4.0d,
-	description: "LV circuit",
+	y: 6.0d,
+	shape: "hexagon",
+	description: "First LV circuit",
 	text: [
 		"This recipe makes no sense, but go with it. It's much simpler than normal."
 	],

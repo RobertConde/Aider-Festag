@@ -34,7 +34,7 @@ mods.jei.JEI.removeAndHide(<minecraft:cauldron>);
 // Sand Recipes
 mods.nuclearcraft.manufactory.removeAllRecipes();
 mods.nuclearcraft.manufactory.addRecipe([<ore:cobblestone>, <minecraft:sand>]);
-
+mods.nuclearcraft.manufactory.addRecipe([<ore:charcoal>, <minecraft:coal>]);
 // LV MAchine Hull
 recipes.remove(<gregtech:machine:501>);
 assembler.findRecipe(16, [<gregtech:cable:5071>*2,<gregtech:machine_casing:1>],null).remove();

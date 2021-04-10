@@ -1,0 +1,18 @@
+{
+	x: 11.0d,
+	y: 2.0d,
+	shape: "gear",
+	text: [
+		"Germanium is not used in base gregtech. However, with a simple script, I can make it useful..."
+	],
+	dependencies: [
+		"be2d4775"
+	],
+	tasks: [{
+		uid: "07774791",
+		type: "item",
+		items: [{
+			item: "contenttweaker:material_part 1 42"
+		}]
+	}]
+}

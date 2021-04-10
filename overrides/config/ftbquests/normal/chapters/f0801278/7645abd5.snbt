@@ -1,0 +1,20 @@
+{
+	x: 10.0d,
+	y: 3.0d,
+	dependencies: [
+		"b5d6a59b"
+	],
+	tasks: [{
+		uid: "65f84418",
+		type: "item",
+		items: [{
+			id: "forge:bucketfilled",
+			tag: {
+				FluidName: "coal",
+				Amount: 1000
+			}
+		}],
+		ignore_damage: true,
+		ignore_nbt: 1b
+	}]
+}

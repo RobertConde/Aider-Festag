@@ -1,6 +1,6 @@
 {
-	x: 21.5d,
-	y: 1.0d,
+	x: 19.0d,
+	y: 8.5d,
 	shape: "gear",
 	description: "Build the Electroplater",
 	text: [
