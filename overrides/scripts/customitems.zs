@@ -192,3 +192,28 @@ magnesium2.register();
 
 var magnesiumhydroxide = MaterialSystem.getMaterialBuilder().setName("Magnesium Hydroxide").setColor("471122").build();
 magnesiumhydroxide.registerParts(["ingot"] as string[]);
+
+//Germanium
+
+var germanium = MaterialSystem.getMaterialBuilder().setName("Germanium").setColor("894999").build();
+germanium.registerParts(["ingot","ore"] as string[]);
+
+//germanium sulfide
+
+var germaniumsulfide = MaterialSystem.getMaterialBuilder().setName("Germanium Sulfide").setColor("819444").build();
+germaniumsulfide.registerParts(["dust"] as string[]);
+
+//germanium oxide
+
+var germaniumoxide1 = MaterialSystem.getMaterialBuilder().setName("Impure Germanium Oxide").setColor("299999").build();
+germaniumoxide1.registerParts(["dust"] as string[]);
+
+//germanium tetrachloride
+
+var germaniumtetrachloride = VanillaFactory.createFluid("germaniumtetrachloride",Color.fromHex("22222"));
+germaniumtetrachloride.register();
+
+//pure germanium oxide
+
+var germaniumoxide2 = MaterialSystem.getMaterialBuilder().setName("Pure Germanium Oxide").setColor("101010").build();
+germaniumoxide2.registerParts(["dust"] as string[]);

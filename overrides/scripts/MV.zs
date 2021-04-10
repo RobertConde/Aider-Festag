@@ -182,9 +182,52 @@ assembler.findRecipe(2400,[<gregtech:meta_item_2:16237>*2,<gregtech:meta_item_2:
 recipes.addShaped(<gregtech:meta_item_2:32490> * 1, [[<gregtech:meta_item_1:10001>, <gregtech:meta_item_1:10001>, <gregtech:meta_item_1:10001>], [<gregtech:meta_item_1:10044>, <gregtech:meta_item_2:32489>, <gregtech:meta_item_1:10044>],[<gregtech:meta_item_1:10152>, <gregtech:meta_item_1:10152>, <gregtech:meta_item_1:10152>]]);
 
 
+//Germanium line
 
+recipes.remove(<contenttweaker:material_part:42>);
 
+//first step germanium sulfide
 
+furnace.addRecipe(<contenttweaker:material_part:44>,<contenttweaker:sub_block_holder_0:1>);
+
+//second step impure germanium oxide
+
+blast_furnace.recipeBuilder()
+    .inputs(<contenttweaker:material_part:44>*1)
+    .outputs(<contenttweaker:material_part:45>*1)
+    .fluidOutputs([<liquid:sulfur_dioxide>*288])
+    .EUt(120)
+    .duration(80)
+    .buildAndRegister();
+
+//third step germanium tetrachloride
+
+chemreactor.recipeBuilder()
+    .inputs(<contenttweaker:material_part:45>*1)
+    .fluidInputs([<liquid:hydrochloric_acid>*576])
+    .fluidOutputs([<liquid:germaniumtetrachloride>*144,<liquid:water>*288])
+    .EUt(111)
+    .duration(100)
+    .buildAndRegister();
+
+//fourth step hydrolyze germanium tetrachloride
+
+chemreactor.recipeBuilder()
+    .fluidInputs([<liquid:germaniumtetrachloride>*144,<liquid:water>*288])
+    .outputs(<contenttweaker:material_part:46>*1)
+    .fluidOutputs([<liquid:diluted_hydrochloric_acid>*576])
+    .EUt(128)
+    .duration(480)
+    .buildAndRegister();
+
+//fifth step  pure germanium oxide -> germanium in blast furnace
+
+blast_furnace.recipeBuilder()
+    .inputs(<contenttweaker:material_part:46>*1)
+    .outputs(<contenttweaker:material_part:42>*1)
+    .EUt(105)
+    .duration(280)
+    .buildAndRegister();
 
 
 
