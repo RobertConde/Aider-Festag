@@ -1,0 +1,17 @@
+{
+	x: 3.5d,
+	y: 4.0d,
+	text: [
+		"There are multiple ways to get this."
+	],
+	dependencies: [
+		"5af8bc7a"
+	],
+	tasks: [{
+		uid: "467c5e1a",
+		type: "item",
+		items: [{
+			item: "gregtech:meta_item_1 1 2103"
+		}]
+	}]
+}

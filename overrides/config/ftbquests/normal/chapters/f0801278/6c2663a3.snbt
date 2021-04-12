@@ -21,5 +21,10 @@
 		items: [{
 			item: "gregtech:machine 1 502"
 		}]
+	}],
+	rewards: [{
+		uid: "dc9eb61e",
+		type: "item",
+		item: "gregtech:compressed_0"
 	}]
 }

@@ -1,6 +1,6 @@
 {
-	x: 16.5d,
-	y: 3.0d,
+	x: 12.5d,
+	y: 3.5d,
 	shape: "gear",
 	text: [
 		"Check LV element processing for the nickel processing line.",

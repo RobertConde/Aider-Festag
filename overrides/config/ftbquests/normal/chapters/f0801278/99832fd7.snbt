@@ -1,6 +1,6 @@
 {
-	x: 9.5d,
-	y: 10.0d,
+	x: 6.5d,
+	y: 13.0d,
 	shape: "hexagon",
 	description: "First MV circuit",
 	text: [

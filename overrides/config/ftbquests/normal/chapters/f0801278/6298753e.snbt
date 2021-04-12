@@ -1,6 +1,6 @@
 {
-	x: 12.5d,
-	y: 0.5d,
+	x: 11.5d,
+	y: 1.0d,
 	text: [
 		"You need sulfuric acid for the mining operation.",
 		"",

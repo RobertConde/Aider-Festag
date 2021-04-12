@@ -1,6 +1,6 @@
 {
-	x: 16.0d,
-	y: 9.5d,
+	x: 13.5d,
+	y: 10.5d,
 	shape: "heart",
 	text: [
 		"Yes, there will be obscure challenges like this one."
@@ -14,5 +14,10 @@
 		items: [{
 			item: "contenttweaker:material_part 1 40"
 		}]
+	}],
+	rewards: [{
+		uid: "252d551b",
+		type: "item",
+		item: "gregtech:compressed_0"
 	}]
 }

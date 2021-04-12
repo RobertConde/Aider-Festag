@@ -19,7 +19,7 @@ var zincOxide = MaterialSystem.getMaterialBuilder().setName("Zinc(II) Oxide").se
 zincOxide.registerParts(["ingot","dust"] as string[]);
 
 // 6: LV Drill Bit
-var LV_drillBit = MaterialSystem.getMaterialBuilder().setName("LV Drill Bit").setColor(45139).build();
+var LV_drillBit = MaterialSystem.getMaterialBuilder().setName("LV").setColor(45139).build();
 LV_drillBit.registerParts(["ingot"] as string[]);
 
 // FLUID: Sodium Ion Solution
@@ -217,3 +217,23 @@ germaniumtetrachloride.register();
 
 var germaniumoxide2 = MaterialSystem.getMaterialBuilder().setName("Pure Germanium Oxide").setColor("101010").build();
 germaniumoxide2.registerParts(["dust"] as string[]);
+
+//fluix ore
+
+var fluixore = MaterialSystem.getMaterialBuilder().setName("Fluix").setColor(Color.fromHex("590fbf")).build();
+fluixore.registerParts(["ore"] as string[]);
+
+// HV ingot
+
+var t3drillbit = MaterialSystem.getMaterialBuilder().setName("HV").setColor("299010").build();
+t3drillbit.registerParts(["ingot"] as string[]);
+
+//MV ingot
+
+var t2drillbit = MaterialSystem.getMaterialBuilder().setName("MV").setColor("541589").build();
+t2drillbit.registerParts(["ingot"] as string[]);
+
+//certus oxide
+
+var certusoxide = MaterialSystem.getMaterialBuilder().setName("Certus Oxide [CtO3]").setColor("444222").build();
+certusoxide.registerParts(["ingot"] as string[]);

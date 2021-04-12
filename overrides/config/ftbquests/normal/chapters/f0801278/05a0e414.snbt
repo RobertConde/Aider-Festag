@@ -1,6 +1,6 @@
 {
-	x: 16.0d,
-	y: 11.0d,
+	x: 10.0d,
+	y: 14.0d,
 	shape: "gear",
 	description: "Build the Hall-Heroult Process Multiblock",
 	text: [

@@ -1,5 +1,5 @@
 {
-	x: 6.5d,
+	x: 4.0d,
 	y: 6.0d,
 	shape: "gear",
 	dependencies: [
@@ -17,5 +17,10 @@
 		}],
 		ignore_damage: true,
 		ignore_nbt: 1b
+	}],
+	rewards: [{
+		uid: "0a4acb12",
+		type: "item",
+		item: "gregtech:compressed_0"
 	}]
 }

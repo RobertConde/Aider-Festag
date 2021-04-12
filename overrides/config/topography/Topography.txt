@@ -1,0 +1,17 @@
+//If this file is deleted, a new set of default configs will be generated.
+
+//Sets if the mod should print documentation.
+printDocumentation(false)
+
+//Sets the Topography WorldType as default
+setAsDefaultWorldType()
+
+//Registers a preset. First argument is name, second is the image name, third is a description, fourth is WorldType, fifth is generator options Json.
+
+overworld = registerPreset("Overworld", "images/Overworld", "Basic overworld. Uses multithreaded noise to generate a bit faster than vanilla.")
+overworld.registerDimension(0, "examples/Overworld")
+
+structureExample = registerPreset("Skyblock", "images/Basic_Tree", "The intended way to play.")
+structureExample.registerDimension(0, "examples/Spawn_Structure")
+
+

@@ -602,3 +602,16 @@ chemreactor.recipeBuilder()
     .EUt(16)
     .duration(1000)
     .buildAndRegister();
+
+//lava stuff
+
+fluid_extractor.recipeBuilder()
+    .inputs(<minecraft:cobblestone>*32)
+    .fluidOutputs([<liquid:lava>*250])
+    .EUt(32)
+    .duration(1200)
+    .buildAndRegister();
+
+centrifuge.findRecipe(80,null,[<liquid:lava>*100]).remove();
+
+print("-----------------FINISHED LOADING LV-----------------");

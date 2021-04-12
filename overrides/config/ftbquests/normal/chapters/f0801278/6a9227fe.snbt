@@ -1,6 +1,6 @@
 {
-	x: 17.0d,
-	y: 11.5d,
+	x: 12.5d,
+	y: 12.5d,
 	shape: "gear",
 	description: "Build the Solar Evaporation Plant",
 	text: [

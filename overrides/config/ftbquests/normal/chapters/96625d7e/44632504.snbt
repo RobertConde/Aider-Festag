@@ -1,0 +1,14 @@
+{
+	x: -2.0d,
+	y: -0.5d,
+	description: "Just a few tips.",
+	text: [
+		"",
+		"MV tier does not have many new elements. There will me many more in HV to compensate, so be prepared. ",
+		"It is highly advised to keep working on the production chains for earlier elements as the machine hull recipes will become increasingly expensive. "
+	],
+	tasks: [{
+		uid: "4907033e",
+		type: "checkmark"
+	}]
+}

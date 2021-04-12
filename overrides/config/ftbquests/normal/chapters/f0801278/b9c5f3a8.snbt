@@ -1,9 +1,8 @@
 {
-	x: 14.5d,
-	y: -3.0d,
+	x: 7.5d,
+	y: -4.5d,
 	shape: "gear",
 	dependencies: [
-		"fd6033c6",
 		"a47e5079"
 	],
 	tasks: [{

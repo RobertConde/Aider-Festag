@@ -230,5 +230,93 @@ blast_furnace.recipeBuilder()
     .buildAndRegister();
 
 
+ 
+// MV MACHINE HULL
+
+recipes.remove(<gregtech:machine:502>);
+recipes.addShaped(<gregtech:machine:502> * 1, [[<gregtech:meta_item_1:10001>, <gregtech:meta_item_1:10044>, <gregtech:meta_item_1:2036>], [<gregtech:machine:501>, <gregtech:meta_item_2:32488>, <gregtech:machine:501>],[<gregtech:meta_item_1:2039>, <contenttweaker:material_part:14>, <minecraft:iron_ingot>]]);
+
+assembler.findRecipe(16,[<gregtech:machine_casing:2>*1,<gregtech:cable:5087>*2],null).remove();
+assembler.findRecipe(16,[<gregtech:machine_casing:2>*1,<gregtech:cable:5018>*2],null).remove();
+
+//mercury
+
+macerator.findRecipe(12,[<gregtech:ore_cinnabar_0>*1],null).remove();
+hammer.findRecipe(6,[<gregtech:ore_cinnabar_0>*1],null).remove();
 
 
+//crafting redstone
+
+mods.modularmachinery.RecipeBuilder.newBuilder("REDSTONE","vanillafactory",1200)
+.addItemInput(<gregtech:meta_item_1:2033>*5)
+.addItemInput(<gregtech:meta_item_1:2065>*10)
+.addItemInput(<gregtech:meta_item_1:2061>*1)
+.addItemInput(<gregtech:meta_item_1:2016>*1)
+.addItemInput(<gregtech:meta_item_1:4001>*2)
+.addFluidInput(<liquid:mercury>*432)
+.addItemOutput(<minecraft:redstone>*18)
+.addEnergyPerTickInput(128)
+.build();
+
+
+// tier two drill bit
+alloy.recipeBuilder()
+    .inputs(<contenttweaker:material_part:6>*12,<gregtech:meta_item_1:10109>*1)
+    .outputs(<contenttweaker:material_part:49>*16)
+    .EUt(32)
+    .duration(100)
+    .buildAndRegister();
+
+//tier three drill bit
+
+alloy.recipeBuilder()
+    .inputs(<gregtech:meta_item_1:10237>*1,<contenttweaker:material_part:49>*12)
+    .outputs(<contenttweaker:material_part:48>*16)
+    .EUt(100)
+    .duration(100)
+    .buildAndRegister();
+
+//nether quartz
+
+blast_furnace.recipeBuilder()
+    .inputs(<gregtech:meta_item_1:2061>*8)
+    .outputs(<gregtech:meta_item_1:2201>*3)
+    .EUt(128)
+    .duration(100)
+    .buildAndRegister();
+
+//fluix
+
+blast_furnace.recipeBuilder()
+    .inputs(<minecraft:quartz>*1,<minecraft:redstone>*1,<appliedenergistics2:material>*1)
+    .outputs(<appliedenergistics2:material:7>*3)
+    .EUt(100)
+    .duration(200)
+    .buildAndRegister();
+
+//certus process
+
+macerator.findRecipe(12,[<appliedenergistics2:quartz_ore>*1],null).remove();
+hammer.findRecipe(6,[<appliedenergistics2:quartz_ore>*1],null).remove();
+recipes.remove(<appliedenergistics2:material>);
+furnace.addRecipe(<appliedenergistics2:material:2>,<appliedenergistics2:quartz_ore>);
+
+//first step certus oxide
+
+blast_furnace.recipeBuilder()
+    .inputs(<appliedenergistics2:material:2>)
+    .outputs(<contenttweaker:material_part:50>*1)
+    .fluidOutputs([<liquid:sulfur_dioxide>*432])
+    .EUt(64)
+    .duration(180)
+    .buildAndRegister();
+
+//second step certus quartz
+
+blast_furnace.recipeBuilder()
+    .inputs(<contenttweaker:material_part:50>*1,<gregtech:meta_item_1:10012>*1)
+    .outputs(<appliedenergistics2:material>*1)
+    .fluidOutputs(<liquid:carbon_monoxide>*432)
+    .EUt(128)
+    .duration(240)
+    .buildAndRegister();

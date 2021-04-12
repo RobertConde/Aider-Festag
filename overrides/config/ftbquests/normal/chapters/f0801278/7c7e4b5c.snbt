@@ -1,6 +1,6 @@
 {
-	x: 19.0d,
-	y: 0.0d,
+	x: 16.5d,
+	y: 1.5d,
 	shape: "gear",
 	text: [
 		"Silver ore -> Silver ingot. It's that simple."

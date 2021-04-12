@@ -1,7 +1,7 @@
 {
 	title: "Start of LV elements",
 	x: 14.25d,
-	y: 0.75d,
+	y: 1.5d,
 	shape: "octagon",
 	text: [
 		"It's time to get into more complex processing lines. ",

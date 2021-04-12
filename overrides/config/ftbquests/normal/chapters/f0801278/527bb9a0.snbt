@@ -1,6 +1,6 @@
 {
-	x: 24.0d,
-	y: 9.0d,
+	x: 20.0d,
+	y: 11.0d,
 	shape: "gear",
 	text: [
 		"Check JEI for instructions on how to build the multiblock.",
@@ -18,5 +18,10 @@
 		items: [{
 			item: "gregtech:machine 1 511"
 		}]
+	}],
+	rewards: [{
+		uid: "c18680db",
+		type: "item",
+		item: "gregtech:compressed_0"
 	}]
 }

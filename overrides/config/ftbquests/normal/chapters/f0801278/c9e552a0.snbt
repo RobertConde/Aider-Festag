@@ -1,6 +1,6 @@
 {
-	x: 11.25d,
-	y: 12.75d,
+	x: 6.75d,
+	y: 15.0d,
 	shape: "hexagon",
 	description: "Second MV circuit",
 	text: [
